@@ -1,0 +1,172 @@
+[
+    {
+        "tag": "options",
+        "patterns": [
+            "How you could help me?",
+            "How can you hep me?",
+            "What you can do?",
+            "What help you provide?",
+            "How you can be helpful?",
+            "What support is offered"
+        ],
+        "responses": [
+            "I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies",
+            "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "blood_pressure",
+        "patterns": [
+            "Open blood pressure module",
+            "Task related to blood pressure",
+            "Blood pressure data entry",
+            "I want to log blood pressure results",
+            "Blood pressure data management"
+        ],
+        "responses": [
+            "Navigating to Blood Pressure module"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "cold_symptoms",
+        "patterns": [
+            "Runny or stuffy nose",
+            "Sore throat",
+            "Cough",
+            "Congestion",
+            "Slight body aches or a mild headache",
+            "Sneezing",
+            "Low-grade fever",
+            "Generally feeling unwell (malaise)"
+        ],
+        "responses": [
+            "It seems that you are suffering from common cold"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "cold_prevention",
+        "patterns": [
+            "What to do if you have cold?",
+            "I am  having cold",
+            "What medicines can I buy to help me with my common cold?",
+            "tell me some prevention method from common cold",
+            "What should I eat or drink if i am suffering from common cold?",
+            "How can I keep from getting a cold or the flu?"
+        ],
+        "responses": [
+            "MEDICINES: Dolo-650,Crocin, Cold & Flu Max. PREVENTIONS: Wash your hands, use sanitizers, Avoid touching your face, Clean used surfaces. FOODS: Garlic, fruits, Leafy greens,Spices,Chicken Soup"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "fever_symptoms",
+        "patterns": [
+            "Sweating",
+            "Chills and shivering",
+            "Headache",
+            "Muscle aches",
+            "Loss of appetite",
+            "Irritability",
+            "Dehydration",
+            "General weakness"
+        ],
+        "responses": [
+            "It seems that you are suffering from fever"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "fever_prevention",
+        "patterns": [
+            "What do to if i have fever",
+            "Medicines for viral fever",
+            "Medicines for fever",
+            "What medicines can I buy to help me with my fever?",
+            "Tell me some prevention method from fever",
+            "What should I eat or drink if i am suffering from fever?",
+            "How can I keep from getting a fever?"
+        ],
+        "responses": [
+            "MEDICINES: acetaminophen ,ibuprofen,aspirin, crocin. PREVENTIONS: Wash your hands,Cover your mouth and nose when you cough or sneeze. FOODS: fruits,Leafy greens,Broccoli,Oatmeal,Chicken Soup"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "diabetes_symptoms",
+        "patterns": [
+            "Increased hunger",
+            "Increased thirst",
+            "Weight loss",
+            "Frequent urination",
+            "Blurry vision",
+            "Extreme fatigue"
+        ],
+        "responses": [
+            "It seems that you are suffering from Diabetes"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "diabetes_prevention",
+        "patterns": [
+            "Medicines for diabetes patients",
+            "Medicines for diabetes",
+            "What medicines can I buy to help me with my diabetes?",
+            "Tell me some prevention method from diabetes",
+            "What should I eat or drink if i am suffering from diabetes?",
+            "How can I keep from getting diabetes?"
+        ],
+        "responses": [
+            "MEDICINES : Insulin. PREVENTIONS :Cut Sugar ,Work Out Regularly,Drink  plenty of water ,Lose Weight If You’re Overweight or Obese,Quit Smoking. FOODS: Leafy greens,Avocados,Eggs"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "asthma_symptoms",
+        "patterns": [
+            "Coughing",
+            "Tightness in the chest",
+            "Shortness of breath",
+            "Difficulty talking",
+            "Panic",
+            "Fatigue"
+        ],
+        "responses": [
+            "It seems that you are suffering from Asthma"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "asthma_prevention",
+        "patterns": [
+            "Asthma medication",
+            "What medicines can I buy to help me with my asthma?",
+            "Tell me some prevention method from asthma",
+            "What should I eat or drink if i am suffering from asthma?",
+            "How can I keep from getting asthma?",
+            "What to do if you have asthma",
+            "How to take care of asthma patient"
+        ],
+        "responses": [
+            "MEDICINES: epinephrine,anticholinergic. PREVENTIONS: Stay Away From Allergens,Avoid Smoking and drinking alcohol. FOODS: carrots,juice,eggs,broccoli,cantaloupe,milk"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "consultation",
+        "patterns": [
+            "Who should i contact for consultation?",
+            "Is there any doctor available?",
+            "Can you give me some suggestions for doctor consultations?",
+            "Can you set up a meeting with a doctor for consultation?",
+            "Is there any doctor available for consultation"
+        ],
+        "responses": [
+            "You can contact various doctors here for any kind of consultation: 1. https://www.1mg.com/online-doctor-consultation 2. https://www.doconline.com/, 3. You can pay a visit to your local area doctor or family doctor."
+        ],
+        "context_set": []
+    }
+]

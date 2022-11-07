@@ -1,0 +1,84 @@
+[
+    {
+        "tag": "entertainment",
+        "patterns": [
+            "I am bored",
+            "Entertain me",
+            "I need some entertainment",
+            "Can you entertain me?"
+        ],
+        "responses": [
+            "Here to entertain you. Lets start:",
+            "How can i entertain you. songs stories jokes",
+            "What do you want me to do for your entertainment?"
+        ],
+        "context_set": [
+            "jokes",
+            "stories",
+            "songs",
+            "riddle"
+        ]
+    },
+    {
+        "tag": "jokes",
+        "patterns": [
+            "Tell me a joke?",
+            "Make me laugh",
+            "Tell me something funny"
+        ],
+        "responses": [
+            "What will make you laugh?"
+        ],
+        "context_set": [
+            "jokes_api"
+        ]
+    },
+    {
+        "tag": "stories",
+        "patterns": [
+            "Tell me a story?",
+            "Can you tell me a story"
+        ],
+        "responses": [
+            "I have so many stories for you. Try me:"
+        ],
+        "context_set": [
+            "stories_api"
+        ]
+    },
+    {
+        "tag": "songs",
+        "patterns": [
+            "Sing me a song",
+            "I want to hear songs",
+            "Play songs for me",
+            "PLay music"
+        ],
+        "responses": [
+            "Which song you want to listen?"
+        ],
+        "context_set": [
+            "songs_api"
+        ]
+    },
+    {
+        "tag": "riddle",
+        "patterns": [
+            "Ask me a riddle",
+            "Ask me a question",
+            "Riddle",
+            "Interesting Riddles",
+            "Do you have riddles?"
+        ],
+        "responses": [
+            "What two things can you never eat for breakfast?.....Lunch and Dinner!",
+            "How can a girl go 25 days without sleep?.....She sleeps and night!",
+            "How do you make the number one disappear?.....Add the letter G and it’s 'gone'!",
+            "What will you actually find at the end of every rainbow?.....The letter 'w'",
+            "What can be caught but never thrown?.....A cold!"
+        ],
+        "context_set": [
+            "riddle_api"
+        ]
+    }
+]

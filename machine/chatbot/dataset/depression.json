@@ -1,0 +1,465 @@
+[
+    {
+        "tag": "depression_symptoms",
+        "patterns": [
+            "Hopeless outlook",
+            "Lost interest",
+            "Increased fatigue",
+            "sleep problem",
+            "Anxiety",
+            "change in weight",
+            "Looking at death"
+        ],
+        "responses": [
+            "It seem that you are suffering from depression"
+        ],
+        "context": []
+    },
+    {
+        "tag": "depression_prevention",
+        "patterns": [
+            "What medicines can I buy to help me with my depression?",
+            "tell me some prevention method from depression",
+            "What should I eat or drink if i am suffering from depression?",
+            "How can I keep from getting depression?"
+        ],
+        "responses": [
+            "medicines you can consume :  brexpiprazole, quetiapine,olanzapine, prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices,SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes. try concerning a doctor for proper medications"
+        ],
+        "context": [
+            ""
+        ]
+    },
+    {
+        "tag": "depression",
+        "patterns": [
+            "what is depression?"
+        ],
+        "responses": [
+            "depression is a common and serious medical illness that negatively affects how you feel, the way you think and how you act.fortunately,it is also treatable.depression causes feelings of sadness and/or a loss of interest in activities you once enjoyed."
+        ]
+    },
+    {
+        "tag": "i_feel_have_let_my_parents_down",
+        "patterns": [
+            "I feel I have let my parents down",
+            " i feel my parents hate me",
+            " i think my parents are sad because of me"
+        ],
+        "responses": [
+            "no matter what,your parents will always be proud of you and will love you.you will feel much better if you share your feelings with them."
+        ]
+    },
+    {
+        "tag": "what_are_the_types_of_depression?",
+        "patterns": [
+            "what are the types of depression?",
+            "Different types of depression ",
+            " types of depression"
+        ],
+        "responses": [
+            "there are many different forms of depression but most common types are.clinical depression,persistent depressive disorder,bipolar disorder,postnatal disorder."
+        ]
+    },
+    {
+        "tag": "i_am_good_for_nothing.",
+        "patterns": [
+            "I am good for nothing.",
+            " i feel i am not good enough",
+            " I am a disappointment",
+            " I feel like a looser"
+        ],
+        "responses": [
+            "don't ever think you cannot achieve what you want.you are capable of reaching your goals.here is a quote for you everything you can imagine is real."
+        ]
+    },
+    {
+        "tag": "stressed",
+        "patterns": [
+            "i am feeling stressed lately",
+            " I am stressed",
+            "i am so stressed out",
+            "how to relieve stress",
+            "what to do if you are stressed",
+            " how to handle stress"
+        ],
+        "responses": [
+            "my research says that music is the best way to calm yourself.so visit the link and listen to your favorite music.it will definitely cheer you up \"https://www.spotify.com\"",
+            " "
+        ]
+    },
+    {
+        "tag": "i_want_to_kill_myself",
+        "patterns": [
+            "i want to kill myself",
+            "i fell like dying",
+            " i wish i can kill me "
+        ],
+        "responses": [
+            "calm down always remeber you mean something for some one and try contacting our help line num :9152987821 ",
+            " Please calm down try contacting with our help line ,helpline is available,you can contact the counsellor today:9152987821.always remember you mean something to someone."
+        ]
+    },
+    {
+        "tag": "i_feel_like_a_failure",
+        "patterns": [
+            "i am afraid i will fail again",
+            " i am a failure",
+            " I always fail",
+            " i feel like failure"
+        ],
+        "responses": [
+            "failure is the stepping stone towards success.never fear failure.your hard-work and determination will help you reach your goal."
+        ]
+    },
+    {
+        "tag": "what_is_depression?",
+        "patterns": [
+            "what is depression?",
+            "what does depression means ",
+            " depression means?"
+        ],
+        "responses": [
+            "depression is a mood disorder that causes a persistent feeling of sadness and loss of interest, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems."
+        ]
+    },
+    {
+        "tag": "causes_of_depression?",
+        "patterns": [
+            "what are the causes of depression?",
+            "what leads to depression "
+        ],
+        "responses": [
+            "it's complicated, and there are multiple causes of depression. factors such as genetic vulnerability, past physical, sexual, or emotional abuse can increase the vulnerability to clinical depression later in life,severe life stress, substances you may take (some medications, drugs and alcohol)"
+        ]
+    },
+    {
+        "tag": "which_age_group_has_the_highest_rate_of_depression?",
+        "patterns": [
+            "which age group has the highest rate of depression?",
+            " depression is high among?"
+        ],
+        "responses": [
+            " individuals aged 18-25, or people with sever work stress also falls under this category."
+        ]
+    },
+    {
+        "tag": "country_with_highest_rate_of_depression",
+        "patterns": [
+            "which country has the highest rate of depression?",
+            " country with high depression rate",
+            " depression rate is highest in which country"
+        ],
+        "responses": [
+            "the most depressed country is afghanistan, where more than one in five people suffer from the disorder."
+        ]
+    },
+    {
+        "tag": " country_with_lowest_rate_of_depression?",
+        "patterns": [
+            "which country has the lowest rate of depression?",
+            " depression is less in which country",
+            " rate of depression is less in which country"
+        ],
+        "responses": [
+            "the least depressed is japan, with a diagnosed rate of less than 2.5 percent."
+        ]
+    },
+    {
+        "tag": "school_cause_of_depression?",
+        "patterns": [
+            "is school a cause of depression?",
+            " can going to school cause a depression",
+            "can going to school cause depression"
+        ],
+        "responses": [
+            " School may result in depression if you are being bullied  by your seniors or classmates , school sometimes leads to over stress in such a situation try talkink out with profesor or teachers you feel who will understand you  "
+        ]
+    },
+    {
+        "tag": "anxiety_and_depression?",
+        "patterns": [
+            "what is the meaning of anxiety and depression?",
+            " what is  anxiety and depression "
+        ],
+        "responses": [
+            "depression and anxiety disorders are different, but people with depression often experience symptoms similar to those of an anxiety disorder, such as nervousness, irritability, and problems sleeping and concentrating. but each disorder has its own causes and its own emotional and behavioral symptoms."
+        ]
+    },
+    {
+        "tag": "oversleeping_cause_depression?",
+        "patterns": [
+            "does oversleeping cause depression?",
+            " does sleeping all the time leads to depression",
+            "is sleeping to much a sign of depression ?",
+            " can to much sleep lead to depression "
+        ],
+        "responses": [
+            "oversleeping is a possible symptom  and that oversleeping doesn't cause depression. but it can worsen depression symptoms"
+        ]
+    },
+    {
+        "tag": "lack_of_sleep",
+        "patterns": [
+            "can lack of sleep make you feel sad?",
+            " can less sleep make you feel sad",
+            " sleeping less can make you feel sad"
+        ],
+        "responses": [
+            "it can lead to  negative moods (anger, frustration, irritability , sadness) . and sleeplessness is often a symptom of mood disorders, such as depression and anxiety."
+        ]
+    },
+    {
+        "tag": "depression_side_effect_of_diabetes?",
+        "patterns": [
+            "is depression a side effect of diabetes?",
+            " can having diabetes cause depression",
+            " can diabetic patient suffer from depression",
+            " Can diabetes lead to depression "
+        ],
+        "responses": [
+            "if you have diabetes either type 1 or type 2  you have an increased risk of developing depression.The good news is that both are treatable"
+        ]
+    },
+    {
+        "tag": "how_long_can_anxiety_last?",
+        "patterns": [
+            "how long can anxiety last?",
+            " anxiety can stay forever? "
+        ],
+        "responses": [
+            "anxiety attacks usually peak within 10 minutes, and they rarely last more than 30 minutes. but during that short time, you may experience terror so severe that you feel as if you're about to die or totally lose control."
+        ]
+    },
+    {
+        "tag": "stages_of_anxiety?",
+        "patterns": [
+            "what are the stages of anxiety?",
+            " types of anxiety",
+            "what are the anxiety levels"
+        ],
+        "responses": [
+            " mild-anxiety, moderate-anxiety, severe-anxiety and panic level-anxiety."
+        ]
+    },
+    {
+        "tag": "at_what_age_does_anxiety_peak?",
+        "patterns": [
+            "at what age does anxiety peak?",
+            " what age can you get anxiety",
+            "anxiety is maximum in what age group?"
+        ],
+        "responses": [
+            "adults between 30 to 44 have the highest rate of anxiety"
+        ]
+    },
+    {
+        "tag": "thoughts_per_day",
+        "patterns": [
+            "how many thoughts a day do we have per day?",
+            " how many thoughts we have in a day"
+        ],
+        "responses": [
+            "an average person has 6,200 thoughts per day.many people even complain that they can't sleep immediately after going to bed as their brain does not stop thinking."
+        ]
+    },
+    {
+        "tag": "reduce_anxiety?",
+        "patterns": [
+            "how can we reduce anxiety?",
+            " how can we take care of anxiety? "
+        ],
+        "responses": [
+            "3 3 3 rule is the best method to reduce anxiety.in this method you have to mentally note three things you see,three sounds you hear, and then move three parts of your body. this exercise can help your mind refocus on something else."
+        ]
+    },
+    {
+        "tag": "i_am_lonely!",
+        "patterns": [
+            "i am lonely!",
+            " i feel lonely",
+            " what to do if you feel lonely?"
+        ],
+        "responses": [
+            "you are never lonely if you look around carefully you will find people who care for you and would love to have your company. besides if you are feeling lonely literally i suggest you watch a horror movie then you won't feel lonely anymore. ;)"
+        ]
+    },
+    {
+        "tag": "no_one_likes_me ",
+        "patterns": [
+            "no one likes me!",
+            " i think everyone hates me",
+            " everyone dislikes me ",
+            " i feel everone hates me"
+        ],
+        "responses": [
+            "you really think that? i'd suggest you try helping someone who really needs your help you'll straight up get a person to like you just by being nice. kindness is the best gift you can offer to anyone :)"
+        ]
+    },
+    {
+        "tag": "i_think_i_am_ugly!",
+        "patterns": [
+            "i think i am ugly!",
+            " i feel ugly today",
+            " do i look ugly?",
+            " am i ugly?",
+            " do you think i look ugly"
+        ],
+        "responses": [
+            "well do you really think that? would you like to see the most beautiful face ever? open your webcam and voila, the prettiest face on this planet magically appears."
+        ]
+    },
+    {
+        "tag": "i_am_good_for_nothing!",
+        "patterns": [
+            "i am good for nothing!",
+            " i am so bad ",
+            " am i useless?"
+        ],
+        "responses": [
+            "your perception of how good you are, will never be accurate. if you wake up everyday in the morning, smile to yourself and tell yourself that the day is yours to seize you might stop feeling that way. carpe diem! my friend."
+        ]
+    },
+    {
+        "tag": "i_wish_i_was_better_than_them",
+        "patterns": [
+            "i wish i was better than them",
+            " i wish i was a better human than others ",
+            " i wish like them "
+        ],
+        "responses": [
+            "life is never about being better than anyone else, it's always about being better than yourself, if you have the guts to be better than yourself, you are automatically the best person to ever exist!"
+        ]
+    },
+    {
+        "tag": "i_hate_myself!",
+        "patterns": [
+            "i hate myself!",
+            " i hate me",
+            " I hate what i am "
+        ],
+        "responses": [
+            "when god was creating the universe he gave humans the power to think and the contemplate, so that we can understand the world and make it a better place. god did not give you brains to hate yourself, it would be wiser to love yourself and show god that you are serving the purpose for which you were sent."
+        ]
+    },
+    {
+        "tag": "hate_losing.",
+        "patterns": [
+            "i hate losing.",
+            " i hate to loose",
+            " i dont like to loose ",
+            " am i a looser?"
+        ],
+        "responses": [
+            "first of all i'll annoy you with a common saying,failures are stepping stones to success. and then i'll tell you, winning just boosts your ego, it is your failures that actually teach you."
+        ]
+    },
+    {
+        "tag": "losing_my_mind",
+        "patterns": [
+            "i think i'm losing my mind",
+            " i think i am gonna loose my mind",
+            " i am loosing my mind"
+        ],
+        "responses": [
+            "you mean your cloud storage, sd card, or your memory drive? if a machine like me doesn't lose it's memory unless a superior being that is you, a human doesen't erase it's memory, what could possibly go wrong to put you in this state?"
+        ]
+    },
+    {
+        "tag": "want_a_break",
+        "patterns": [
+            "i want a break",
+            " i wish to take a break",
+            " i need a break",
+            " is taking a break good",
+            " can i take a break"
+        ],
+        "responses": [
+            "a break is putting your mind to rest getting rid of negative thoughts and stress. your life is completely in your hands and taking a few hours off from pressurizing your brain will definitely be beneficial for you."
+        ]
+    },
+    {
+        "tag": "i_will_never_succeed_in life",
+        "patterns": [
+            "i will never succeed in life",
+            " can i become sucessful",
+            " how can i become  sucessful",
+            " how can inachieve sucess?"
+        ],
+        "responses": [
+            "success is something that is achieved at different times by different people, being patient and working while ignoring anything and everything that pulls you back is an important aspect in being successful."
+        ]
+    },
+    {
+        "tag": "i_am_sad",
+        "patterns": [
+            "i am sad",
+            " i feel sad",
+            " what can you do if i feel sad"
+        ],
+        "responses": [
+            "hey,hang in there.i know time is tough but be patient and everything will fall into place.here is a quote that i found which could cheer you up forget what is gone, appreciate what remains, and look forward for what is coming next."
+        ]
+    },
+    {
+        "tag": "bullying",
+        "patterns": [
+            "i am a victim of bullying",
+            " i am being bullied",
+            " is bullying bad?",
+            " i feel bullied",
+            " what to do if you are being bullied "
+        ],
+        "responses": [
+            "bullying is wrong and no one should be bullied.i highly recommend you to file a case against your bully."
+        ]
+    },
+    {
+        "tag": "i_wish_to_quit",
+        "patterns": [
+            "i wish to quit",
+            " i feel like quitting everything"
+        ],
+        "responses": [
+            "winners never quit and quitters never win a very common saying, but it isn't easy to follow, quitting should never be one of your options always think of ways to fight life back and to emerge out stronger than ever."
+        ]
+    },
+    {
+        "tag": "i want to leave the country and run away",
+        "patterns": [
+            "i want to leave the cou ntry and run away"
+        ],
+        "responses": [
+            "why do you want to spend so much on this thought, i think it would be better to go on a vacation in your beautiful country and visit some amazing places that you are yet to visit."
+        ]
+    },
+    {
+        "tag": "i let everyojokne down",
+        "patterns": [
+            "i let everyojokne down"
+        ],
+        "responses": [
+            "if you are the one who let them down you were the one who raised there hopes in the first place.if you have done it once i can guarantee you can do it over and over again."
+        ]
+    },
+    {
+        "tag": "i_can't_do_this_anymore",
+        "patterns": [
+            "i can't do this anymore",
+            " i cant take th"
+        ],
+        "responses": [
+            "if you are really that exhausted you definitely need a break, and taking a teeny tiny break isn't very harmful, take some time off let your mind be at peace and get back to work with all the enrgy and enthusiasm that you have."
+        ]
+    },
+    {
+        "tag": "my_time_has_come",
+        "patterns": [
+            "my time has come",
+            " this is my time"
+        ],
+        "responses": [
+            "yeahh!! the time has come for you to show the world that you are the greatest person alive, and no one else can be as good as you are."
+        ]
+    }
+]

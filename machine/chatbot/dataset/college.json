@@ -1,0 +1,300 @@
+[
+    {
+        "tag": "committees",
+        "patterns": [
+            "Can you tell me about committees?",
+            "How many committees are there?",
+            "What are the different committees in college",
+            "Different committee in college",
+            "Are there any committee in college",
+            "Give me committee details",
+            "Committees",
+            "How many committees are there in college"
+        ],
+        "responses": [
+            "There are various committees in college. You can know more by visiting our portal()",
+            "This is the list of all the committees in our college()",
+            "There are total 10 committees. Click here to know more about them()",
+            "There are various committees in our college. You can visit our portal to know more()",
+            "We have many students committees here in Datta Meghe College of Engineering. Know more here()"
+        ],
+        "context_set": [
+            "csi",
+            "gdsc",
+            "nss",
+            "fomes",
+            "ecell",
+            "soche",
+            "aces"
+        ]
+    },
+    {
+        "tag": "csi",
+        "patterns": [
+            "Can you tell me about CSI?",
+            "Can you tell me about computer society of india?",
+            "What is CSI?",
+            "CSI?"
+        ],
+        "responses": [
+            "CSI stands for Computer Society of India, it is a committee organized by Computer department students. Click here to know more()",
+            "CSI arranges various tech related events, it is a committee organized by computer branch students. Click here to know more()",
+            "CSI is a committee that is organized by computer branch students which arranges various events. Click here to know more()"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "gdsc",
+        "patterns": [
+            "Can you tell me about GDSC?",
+            "Can you tell me about google developer students club?",
+            "What is GDSC?",
+            "What about GDSC?",
+            "GDSC?"
+        ],
+        "responses": [
+            "GDSC stands for Google Developer Students Club.This club arranges various tech related events. Click here to know more()",
+            "Google Developer Students Club arranges various tech related events. Click here to know more()",
+            "GDSC is a committee that is powered by google.This students' club arranges various tech related events. Click here to know more()"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "nss",
+        "patterns": [
+            "Can you tell me about NSS?",
+            "Can you tell me about National Service Scheme?",
+            "What is NSS?",
+            "NSS?"
+        ],
+        "responses": [
+            "NSS stands for National Service Scheme.It is managed by government of india and arranges various drives for the welfare of society. Click here to know more()",
+            "NSS stands for National Service Scheme.NSS arranges various drives that are beneficial for society. Click here to know more()"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "fomes",
+        "patterns": [
+            "What is FOMES committee",
+            "FOMES committee?",
+            "FOMES"
+        ],
+        "responses": [
+            "It is the Forum of Mechanical Engineering Students (FOMES). For more info visit our portal()",
+            "It is a student committee of Mechanical department. For more info visit our portal()"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "ecell",
+        "patterns": [
+            "What is E-CELL",
+            "E-CELL?"
+        ],
+        "responses": [
+            "E-CELL, DMCE promotes Entrepreneurship among the Students for more info visit()",
+            "E-Cell DMCE is called Entrepreneurship Cell, an entrepreneurship promoting organization that provides insights and real-life business experience."
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "soche",
+        "patterns": [
+            "What is SOChE committee",
+            "SOChE committee?",
+            "SOChE?"
+        ],
+        "responses": [
+            "Student’s Organization of Chemical Engineering (SOChE) is the student’s governing body related to Chemical Department. Click here to know more()",
+            "Student’s Organization of Chemical Engineering for more information visit our portal()"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "aces",
+        "patterns": [
+            "What is ACES?",
+            "What is ACES committee",
+            "Elaborate ACES Committee?"
+        ],
+        "responses": [
+            "It stands for ASSOCIATION OF CIVIL ENGINEERING STUDENTS. Click here to know more()",
+            "It is a committee under Civil Engineering department Of DMCE. Click here to know more()"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "events",
+        "patterns": [
+            "Events organized",
+            "List of events",
+            "List of events organized in college",
+            "List of events conducted in college",
+            "What events are conducted in college",
+            "Events?",
+            "What are the events",
+            "Tell me about events",
+            "What about events",
+            "Can you tell me about upcoming events?",
+            "Upcoming events?",
+            "Tell me about events",
+            "Future events"
+        ],
+        "responses": [
+            "We have many events in our college arranged by various committees every year including technical and non technical events. Visit the page to know more()"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "principal",
+        "patterns": [
+            "Principal of college?",
+            "Who is the Principal of college?",
+            "Who is the Principal",
+            "Principal"
+        ],
+        "responses": [
+            "Dr. Aarti is the Principal of Datta Meghe College of Engineering"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "hod",
+        "patterns": [
+            "HOD of college?",
+            "Who is the head of college",
+            "Head of department?",
+            "Who is the HOD",
+            "What is a HOD?",
+            "What does a HOD does?"
+        ],
+        "responses": [
+            "HOD is the Head Of a particular Department.Which department's HOD you want to know about?",
+            "Please elaborate which department?List of Departments",
+            "HOD is the Head Of a particular Department",
+            "HOD is the person who manages a particular assigned department of college"
+        ],
+        "context_set": [
+            "hod_computer",
+            "hod_it",
+            "hod_mechanical",
+            "hod_chemical",
+            "hod_electronics_telecommunication"
+        ]
+    },
+    {
+        "tag": "hod_computer",
+        "patterns": [
+            "Who is the HOD of Computer department",
+            "HOD of Computer department?",
+            "Head of Computer department",
+            "Computer branch HOD"
+        ],
+        "responses": [
+            "Prof. Amol Pande is the HOD of Computer Department",
+            "Prof Amol Pande"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "hod_it",
+        "patterns": [
+            "Who is the HOD of IT department",
+            "HOD of IT department?",
+            "Head of IT department"
+        ],
+        "responses": [
+            "Dr Sujata Kolhe is the HOD of IT department",
+            "Dr Sujata Kolhe"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "hod_mechanical",
+        "patterns": [
+            "Who is the HOD of Mechanical department",
+            "HOD of Mech department?",
+            "HOD of Mechanical department?",
+            "Head of Mech department",
+            "Head of Mechanical department",
+            "HOD of Mech?",
+            "HOD of Mechanical Department?",
+            "Mech branch HOD",
+            "Mechanical branch HOD",
+            "Mechanical engineering HOD"
+        ],
+        "responses": [
+            "Dr Usha Pawar is the HOD of Mechanical department",
+            "Dr Usha Pawar"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "hod_chemical",
+        "patterns": [
+            "Who is the HOD of Chemical department",
+            "HOD of Chem department?",
+            "HOD of Chemical department?",
+            "Head of Chem department",
+            "Head of Chemical department",
+            "Chemical engineering HOD",
+            "Electronic and telecommunication"
+        ],
+        "responses": [
+            "Dr Kalpana Deshmukh is the HOD of Chemical department",
+            "Dr Kalpana Deshmukh"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "hod_electronics_telecommunication",
+        "patterns": [
+            "Who is the HOD of electronics and telecommunication department",
+            "HOD of electronic and telecommunication department?",
+            "Head of EXTC department",
+            "HOD of EXTC department"
+        ],
+        "responses": [
+            "Dr. Dnyandeo J Pete is the HOD of EXTC department",
+            "Dr. Dnyandeo J Pete"
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "technitude",
+        "patterns": [
+            "What is Technitude",
+            "What is Technitude Event",
+            "Technitude?"
+        ],
+        "responses": [
+            "Technitude is an annual technical festival of DMCE college with number of competitions to participate in."
+        ],
+        "context_set": []
+    },
+    {
+        "tag": "contact",
+        "patterns": [
+            "DMCE Contact info",
+            "How to contact college",
+            "DMCE telephone number",
+            "telephone number",
+            "DMCE College number",
+            "What is your DMCE contact no?",
+            "Contact number of DMCE?",
+            "How to call you",
+            "College phone no?",
+            "How can i contact you",
+            "Can i get your phone number",
+            "How can i call you",
+            "Phone number",
+            "Phone no",
+            "Call"
+        ],
+        "responses": [
+            "You can contact the college at +91597124816"
+        ],
+        "context_set": []
+    }
+]
