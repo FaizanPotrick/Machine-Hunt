@@ -78,13 +78,15 @@ const Api = () => {
         <li>Enter your own &quot;MESSAGE&quot; and get a response.</li>
       </ul>
       <CmdSnippet
-        command={`${process.env.WEBSITE_URL}/api/chatbot/API_KEY/MESSAGE`}
+        command={"https://machinehunt.vercel.app/api/chatbot/API_KEY/MESSAGE"}
       />
       <div className="mt-3 w-full text-sm sm:text-base font-medium text-gray-600">
         Example:
       </div>
       <CmdSnippet
-        command={`${process.env.WEBSITE_URL}/api/chatbot/MDLom5KaiT5z3hQ6yuCLCe8u/hello`}
+        command={
+          "https://machinehunt.vercel.app/api/chatbot/MDLom5KaiT5z3hQ6yuCLCe8u/hello"
+        }
       />
       <div className="mt-5 text-sm sm:text-base md:text-lg font-medium text-gray-600">
         Send an API request through Thunder Client or Postman

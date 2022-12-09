@@ -26,7 +26,7 @@ const Dashboard = () => {
   const [Machine_Name, setMachine_Name] = useState("");
 
   useEffect(() => {
-    return async () => {
+    const fetchDashboard = async () => {
       setLoading(true);
       try {
         const { data } = await axios.get("/api/dashboard");
@@ -39,6 +39,7 @@ const Dashboard = () => {
       }
       setLoading(false);
     };
+    fetchDashboard();
   }, [isFetch]);
 
   const GenerateApiKey = async (e) => {

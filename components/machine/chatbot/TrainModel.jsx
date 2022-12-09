@@ -36,7 +36,7 @@ const TrainModel = () => {
               <span className="font-semibold">Click to upload</span>
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              JSON Format (MAX. 10MB)
+              JSON Format (MAX. 1MB)
             </p>
           </div>
         </div>

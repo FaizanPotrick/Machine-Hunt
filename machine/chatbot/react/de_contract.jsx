@@ -18,8 +18,8 @@ export const split_sentences = (dataset) => {
   let words = [];
   let classes = [];
   const documents = [];
-  for (intent of dataset) {
-    for (pattern of intent.patterns) {
+  for (const intent of dataset) {
+    for (let pattern of intent.patterns) {
       pattern = replace(pattern);
       pattern = pattern.split(" ");
       words.push(...pattern);
@@ -41,10 +41,10 @@ export const words_to_binary = (words, classes, documents) => {
   const training = [];
   const output_empty = Array(classes.length).fill(0);
 
-  for (document of documents) {
+  for (const document of documents) {
     const bag = [];
     const word_patterns = document[0];
-    for (word of words) {
+    for (const word of words) {
       bag.push(word_patterns.includes(word) ? 1 : 0);
     }
     let output_row = [...output_empty];
