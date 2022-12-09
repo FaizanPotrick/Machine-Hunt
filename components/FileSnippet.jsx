@@ -10,10 +10,11 @@ const FileSnippet = ({ file }) => {
   const [isCopy, setIsCopy] = useState(false);
 
   useEffect(() => {
-    return async () => {
+    const fetchCode = async () => {
       const { data } = await axios.post("/api/file", { file });
       setCode(data);
     };
+    fetchCode();
   }, [file]);
 
   return (
