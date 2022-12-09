@@ -7,7 +7,9 @@ const File = async (req, res) => {
   }
   const { file } = req.body;
   try {
-    const code = fs.readFileSync(`machine/${file}`, { encoding: "utf8" });
+    const code = fs.readFileSync(process.cwd() + `/machine/${file}`, {
+      encoding: "utf8",
+    });
     res.status(200).json(code);
   } catch (err) {
     res.status(404).json("File not Found");
