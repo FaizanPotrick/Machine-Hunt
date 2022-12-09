@@ -54,34 +54,48 @@ const Mail = async ({ name, email_address, verification_code }) => {
     © 2022 Machine Hunt | All Rights Reserved
   </div>
    `;
-  nodemailer
-    .createTransport({
-      service: "gmail",
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_ID,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    })
-    .sendMail(
-      {
-        from: process.env.EMAIL_ID,
-        to: email_address,
-        subject: "Verification Code",
-        html: template,
-      },
-      function (error) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("Email sent successfully");
-        }
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.EMAIL_ID,
+      pass: process.env.EMAIL_PASSWORD,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  await new Promise((resolve, reject) => {
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        resolve(success);
       }
-    );
+    });
+  });
+
+  const mailData = {
+    from: process.env.EMAIL_ID,
+    to: email_address,
+    subject: "Verification Code",
+    html: template,
+  };
+
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData, (err, info) => {
+      if (err) {
+        console.log(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
+  });
 };
 
 export default Mail;
