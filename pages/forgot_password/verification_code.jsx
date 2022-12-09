@@ -10,7 +10,7 @@ const Verification_Code = () => {
   const router = useRouter();
 
   useEffect(() => {
-    return async () => {
+    const verify = async () => {
       try {
         await axios.get("/api/verify");
         setLoading(false);
@@ -20,6 +20,7 @@ const Verification_Code = () => {
         router.push("/forgot_password/email_address");
       }
     };
+    verify();
   }, []);
 
   useEffect(() => {
