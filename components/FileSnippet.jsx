@@ -15,7 +15,7 @@ const FileSnippet = ({ file }) => {
       setCode(data);
     };
     fetchCode();
-  }, [file]);
+  }, []);
 
   return (
     <div className="my-2 bg-[#0E1915]/[0.92] w-full max-w-7xl rounded-lg text-white overflow-hidden shadow-lg">
