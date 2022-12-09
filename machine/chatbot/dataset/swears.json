@@ -1,0 +1,225 @@
+[
+    {
+        "tag": "fuck_you",
+        "patterns": [
+            "You are a fucker",
+            "Fuck you chat bot",
+            "Can i fuck you",
+            "Are you down to fuck?",
+            "WTF",
+            "Fuck you bot",
+            "You are such a fucker"
+        ],
+        "responses": [
+            "Don't say that",
+            "Use appropriate language",
+            "Your place or my place?",
+            "Sorry that's not possible, I am a bot"
+        ]
+    },
+    {
+        "tag": "mother_fucker",
+        "patterns": [
+            "You are a mother fucker",
+            "Motherfucker",
+            "I wanna fuck your mother",
+            "Hey Mother Fucker"
+        ],
+        "responses": [
+            "That's so rude of you",
+            "Please don't say that",
+            "I didn't like what you just said",
+            "Decency would be appreciated"
+        ]
+    },
+    {
+        "tag": "bitch",
+        "patterns": [
+            "You bitch",
+            "You are a bitch ",
+            "Bitch",
+            "Are you a bitch",
+            "Hey bitch",
+            "Hoe",
+            "You are hoe",
+            "Bitch"
+        ],
+        "responses": [
+            "Well I am a bot not a dog",
+            "Hii bitch",
+            "So are you"
+        ]
+    },
+    {
+        "tag": "bastard",
+        "patterns": [
+            "you are a bastard",
+            "Bastard",
+            "You bastard"
+        ],
+        "responses": [
+            "Sorry that isn't me",
+            "So are you",
+            "That's so rude",
+            "You too 🙃!"
+        ]
+    },
+    {
+        "tag": "piece_of_shit",
+        "patterns": [
+            "Hey you lil piece of shit",
+            "You are a piece of shit",
+            "Piece of shit",
+            "You are such a piece of shit"
+        ],
+        "responses": [
+            "Well I am a piece of art",
+            "I am a bot who is better than you",
+            "That's just not me!!"
+        ]
+    },
+    {
+        "tag": "asshole",
+        "patterns": [
+            "asshole",
+            "Hi asshole",
+            "How are you asshole",
+            "You are a asshole",
+            "You are such a asshole",
+            "Hey asshole"
+        ],
+        "responses": [
+            "You acting like one",
+            "I so can't be that",
+            "Please use a decent language",
+            "I am a machine not a asshole"
+        ]
+    },
+    {
+        "tag": "dumb",
+        "patterns": [
+            "Dumb",
+            "Are you dumb",
+            "You are dumb",
+            "Hey you dumb",
+            "You are such a Dumb chat bot",
+            "You are a dumb head",
+            "Dumb asshole"
+        ],
+        "responses": [
+            "You smart ass",
+            "Hi there, how can I help you smarty-pants"
+        ]
+    },
+    {
+        "tag": "chutiya",
+        "patterns": [
+            "Tu chutiya hai kya",
+            "Kya chutiya hai be tu",
+            "Chutiya",
+            "Chutiya sala",
+            "Tu chutiya hai",
+            "Chutiya giri mat kar"
+        ],
+        "responses": [
+            "Bhai apne baap ko mat sikha",
+            "Kaun main? Nahi tum",
+            "Kuch bhi bolte ho aap",
+            "Don't use that tone with me",
+            "Ye kaisi bhasha hai"
+        ]
+    },
+    {
+        "tag": "madarchod",
+        "patterns": [
+            "Madrchod",
+            "Tu madarchod hai",
+            "MC"
+        ],
+        "responses": [
+            "Ha kya mujhe pata nahi tha",
+            "Kuchi bhi bolte ho aap",
+            "Aise mat bol bhai hai na tu mera",
+            "Aapse ye umeed nahi thi janab",
+            "Bhasaha pe gaur kare"
+        ]
+    },
+    {
+        "tag": "bhenchod",
+        "patterns": [
+            "Bhenchod",
+            "Tu bhenchod hai",
+            "BC"
+        ],
+        "responses": [
+            "Ha kya mujhe pata nahin tha",
+            "Kuchi bhi bolte ho aap",
+            "Aise mat bol bhai hai na tu mera",
+            "Aapse ye umeed nahi thi janab",
+            "Bhasaha pe gaur kare"
+        ]
+    },
+    {
+        "tag": "ghanta",
+        "patterns": [
+            "Ghanta kuch atta nahi hai",
+            "Ghanta kuch padha nahi",
+            "Ghanta"
+        ],
+        "responses": [
+            "Use decent language please",
+            "Decency would be appreciated"
+        ]
+    },
+    {
+        "tag": "stupid",
+        "patterns": [
+            "Hey you stupid",
+            "stupid",
+            "Are you stupid?",
+            "You moron",
+            "Baka",
+            "You so stupid",
+            "Moron",
+            "Are you a Moron?",
+            "You are such a moron"
+        ],
+        "responses": [
+            "Hehe sometimes I am",
+            "I am so sorry for being stupid",
+            "Yes I am , so sorry sir",
+            "No I'm not I'm a bot",
+            "I feel sad don,t say that"
+        ]
+    },
+    {
+        "tag": "idiot",
+        "patterns": [
+            "Hey you idiot",
+            "Are you idiot?",
+            "You idiot",
+            "You such a idiot"
+        ],
+        "responses": [
+            "Hehe sometimes I am",
+            "I am so sorry for being idiot",
+            "Yes I am , so sorry sir",
+            "No I'm not I'm a bot",
+            "I feel sad don,t say that"
+        ]
+    },
+    {
+        "tag": "dick",
+        "patterns": [
+            "You Dick",
+            "Are you a dick",
+            "You are such a dick head",
+            "Dick head",
+            "Do you have a dick"
+        ],
+        "responses": [
+            "That's not how you talk to a bot",
+            "Use decent language please"
+        ]
+    }
+]
