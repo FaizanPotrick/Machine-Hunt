@@ -18,7 +18,7 @@ const bag_of_words = (message) => {
 const predict_class = async (message) => {
   const classes = require("./classes.json");
   const model = await tf.loadLayersModel(
-    `${process.env.WEBSITE_URL}/api/model.json`
+    `${process.env.FILE_WEBSITE_URL}/api/chatbot/model.json`
   );
   const predict = model.predict(tf.tensor([bag_of_words(message)]));
   const result = await predict.argMax(1).dataSync()[0];
