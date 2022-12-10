@@ -18,7 +18,7 @@ const FileSnippet = ({ file }) => {
   }, []);
 
   return (
-    <div className="my-2 bg-[#0E1915]/[0.92] w-full max-w-7xl rounded-lg text-white overflow-hidden shadow-lg">
+    <div className="my-2 bg-[#0E1915]/[0.92] w-full max-w-7xl rounded-lg text-white overflow-hidden shadow-md">
       <div className="flex justify-between items-center p-2.5 pl-5 bg-[#0F1B17]/90 shadow-md sm:text-lg">
         <div className="font-semibold">{fileName}</div>
         <button
