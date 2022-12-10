@@ -20,7 +20,6 @@ const Email_Address = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      console.log(email);
       await axios.post("/api/credentials/email_address", {
         email_address: email,
       });
@@ -40,13 +39,15 @@ const Email_Address = () => {
     <div className="py-5 flex flex-col justify-center items-center my-auto w-full">
       <Head>
         <title>Forgot Password</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Machine Hunt provides different programming languages to build your model. build your model with your preferred language."
+          content="Machine Hunt provides different programming languages to build your model. Build your model with your preferred language."
         />
       </Head>
-      <div className="max-w-md w-full flex flex-col justify-center items-center p-5 sm:p-10 shadow-inner drop-shadow-lg rounded-xl bg-white border">
-        <div className="text-xl sm:text-2xl mr-auto text-[#00553a] mb-8">
+      <div className="max-w-md w-full flex flex-col justify-center items-center p-5 sm:px-10 shadow-inner drop-shadow-lg rounded-xl bg-white border">
+        <div className="text-lg sm:text-xl mr-auto text-[#00553a] mb-5">
           Forgot Password?
         </div>
         <form className="w-full" onSubmit={send_verification_code_fn}>
