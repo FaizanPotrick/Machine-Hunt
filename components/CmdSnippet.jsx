@@ -4,7 +4,7 @@ const CmdSnippet = ({ command }) => {
   const [isCopy, setIsCopy] = useState(false);
 
   return (
-    <div className="my-1 bg-[#0F1B17]/90 w-full max-w-7xl rounded-lg text-white overflow-y-auto flex justify-between items-center py-2.5 px-5 shadow-lg text-sm sm:text-base lg:text-[17px]">
+    <div className="my-1 bg-[#0F1B17]/90 w-full max-w-7xl rounded-lg text-white overflow-y-auto flex justify-between items-center py-2.5 px-5 shadow-md text-sm sm:text-base lg:text-[17px]">
       <pre>
         <code>{command}</code>
       </pre>
@@ -19,7 +19,7 @@ const CmdSnippet = ({ command }) => {
         disabled={isCopy}
         className={`${
           isCopy && "text-[#c5c8c6]/80"
-        } flex justify-center items-center duration-300 hover:text-[#c5c8c6]/80`}
+        } h-7 flex justify-center items-center duration-300 hover:text-[#c5c8c6]/80`}
       >
         {!isCopy ? (
           <svg

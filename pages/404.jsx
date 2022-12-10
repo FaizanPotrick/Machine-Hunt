@@ -4,14 +4,15 @@ import Link from "next/link";
 const PageNotFound = () => {
   return (
     <div className="py-5 flex flex-col justify-center items-center my-auto w-full">
-      <div className="mb-8 font-extrabold text-8xl sm:text-9xl text-[#00553a]/70">
+      <div className="mb-5 sm:mb-8 font-extrabold text-7xl sm:text-9xl text-[#00553a]/70">
         404
       </div>
-      <div className="text-xl sm:text-3xl text-center text-gray-800">
+      <div className="text-lg sm:text-3xl text-center text-gray-800">
         Sorry, we couldn&apos;t find this page.
       </div>
-      <div className="mt-2 tet-sm sm:text-base mb-8 text-[#00553a]/80 text-center">
-        But don&apos;t worry, you can find plenty of other things on our homepage.
+      <div className="mt-2 text-sm sm:text-base mb-5 sm:mb-8 text-[#00553a]/80 text-center">
+        But don&apos;t worry, you can find plenty of other things on our
+        homepage.
       </div>
       <Link
         href="/"
