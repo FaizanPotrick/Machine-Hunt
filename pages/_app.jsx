@@ -8,7 +8,7 @@ import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <div className="flex flex-col items-center min-h-screen p-5 pb-2 h-full">
+    <div className="flex flex-col items-center min-h-screen px-5 py-2 h-full">
       <Head>
         <meta
           name="description"

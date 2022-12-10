@@ -65,9 +65,11 @@ const Dashboard = () => {
     <div className="my-5 sm:mb-auto p-8 flex flex-col justify-center items-start w-full max-w-7xl border-2 border-gray-200/60 shadow-inner rounded-xl">
       <Head>
         <title>Dashboard</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Machine Hunt provides different programming languages to build your model. build your model with your preferred language."
+          content="Machine Hunt provides different programming languages to build your model. Build your model with your preferred language."
         />
       </Head>
       <div className="sm:text-lg lg:text-xl font-semibold text-[#00553a] text-right w-full capitalize">
@@ -81,7 +83,7 @@ const Dashboard = () => {
         onSubmit={GenerateApiKey}
       >
         <select
-          className="bg-transparent px-2.5 sm:px-5 text-[#00553a]/90 font-medium outline-none"
+          className="bg-transparent px-2.5 sm:px-5 text-[#00553a]/90 font-medium outline-none cursor-pointer"
           onChange={(e) => {
             setMachine_Name(e.target.value);
           }}
@@ -89,7 +91,7 @@ const Dashboard = () => {
           required
         >
           <option value="">Machine</option>
-          <option value="ChatBot">Chatbot</option>
+          <option value="ChatBot">ChatBot</option>
         </select>
         <button
           className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-xl text-sm sm:text-base duration-300 hover:scale-105 text-white font-medium"
