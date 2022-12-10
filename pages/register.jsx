@@ -96,7 +96,7 @@ const Register = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Register on Machine Hunt, a website that helps you build your machine learning based models."
+          content="Register on Machine Hunt, a website that helps you build your machine learning based models.You can register easily with google or create new account on the website."
         />
       </Head>
       <div className="max-w-md w-full flex flex-col justify-center items-center p-5 sm:px-10 shadow-inner drop-shadow-lg rounded-xl bg-white border">
