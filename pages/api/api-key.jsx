@@ -22,7 +22,10 @@ const Api_Key = async (req, res) => {
     const { machine_name } = req.body;
     const Api_Key = await uid();
     try {
-      const api_response = await ApiKey.findOne({ machine_name });
+      const api_response = await ApiKey.findOne({
+        user_id: decoded.user_id,
+        machine: machine_name,
+      });
       if (api_response) {
         return res.status(400).json({
           type: "error",

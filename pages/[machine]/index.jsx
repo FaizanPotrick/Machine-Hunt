@@ -25,12 +25,14 @@ const Machine = () => {
     <div className="py-5 flex flex-col justify-center items-center my-auto w-full">
       <Head>
         <title>Select Language</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Machine Hunt provides different programming languages to build your model. build your model with your preferred language."
+          content="Machine Hunt provides different programming languages to build your model. Build the model with your preferred language."
         />
       </Head>
-      <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#00553a] mb-3 sm:mb-4 capitalize">
+      <div className="text-3xl lg:text-4xl font-semibold text-[#00553a] mb-3 sm:mb-4 capitalize">
         {Machines.map(({ title, tag }) => {
           if (tag === machine) {
             return title;
@@ -40,20 +42,20 @@ const Machine = () => {
       <div className="text-lg sm:text-xl md:text-2xl text-center font-medium text-[#00553a]/90">
         These are your two options:
       </div>
-      <div className="mt-3 max-w-5xl sm:text-lg md:text-xl text-center text-gray-800">
+      <div className="mt-1 max-w-5xl text-sm sm:text-lg text-center text-gray-800">
         Choose your Preferred Coding Language to construct the Model.
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-6 mt-8 md:mt-12 lg:mt-14 w-full">
+      <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-6 mt-6 md:mt-8 lg:mt-10 w-full">
         {Languages.map(({ title, description, link }, index) => (
           <Link
-            key={index}
             href={link}
-            className="h-full w-full max-w-xs sm:max-w-sm border-2 border-[#0e8f66]/20 shadow-lg hover:scale-95 duration-500 rounded-xl bg-[#0e8f66]/[0.15] p-4 md:p-6"
+            key={index}
+            className="h-full w-full max-w-xs sm:max-w-[21rem] border-2 border-[#0e8f66]/20 shadow-lg hover:scale-95 duration-500 rounded-xl bg-[#0e8f66]/[0.15] p-4 md:p-5"
           >
-            <div className="text-xl md:text-3xl font-semibold text-[#00553a] mb-4">
+            <div className="text-xl md:text-2xl font-semibold text-[#00553a] mb-3">
               {title}
             </div>
-            <div className="text-sm md:text-base text-gray-500/80 whitespace-pre-wrap">
+            <div className="text-sm text-gray-500/80 whitespace-pre-wrap">
               {description}
             </div>
           </Link>

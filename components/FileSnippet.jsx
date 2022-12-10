@@ -3,7 +3,7 @@ import axios from "axios";
 import Prism from "prismjs";
 
 const FileSnippet = ({ file }) => {
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState("Loading...");
   const [fileName] = useState(() => {
     return file.split("/").pop();
   });
