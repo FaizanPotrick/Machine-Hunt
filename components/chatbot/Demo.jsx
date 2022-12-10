@@ -24,7 +24,7 @@ const Demo = () => {
     <div className="py-5 flex flex-col justify-center items-center my-auto w-full">
       <Head>
         <title>Chatbot | Demonstration</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"

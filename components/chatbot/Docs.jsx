@@ -11,7 +11,7 @@ const Docs = () => {
     <div className="my-5 p-5 sm:p-6 md:p-8 flex flex-col justify-center items-start w-full max-w-7xl shadow-inner border-2 border-gray-200/60 rounded-xl">
       <Head>
         <title>Chatbot | Documentation</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
