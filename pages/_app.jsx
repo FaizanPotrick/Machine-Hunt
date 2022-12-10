@@ -10,12 +10,12 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <div className="flex flex-col items-center min-h-screen px-5 py-2 h-full">
       <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="Machine Hunt is a website to build machine learning based models with steps that are easy to understand and implement."
         />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <StateProvider>
