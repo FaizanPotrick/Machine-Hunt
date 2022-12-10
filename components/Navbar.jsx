@@ -44,7 +44,7 @@ const Navbar = () => {
                 setIsLogin(false);
               }}
               key="logout"
-              className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-xl text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
+              className="px-4 sm:px-5 py-1 sm:py-1.5 bg-[#0e8f66]/80 rounded-xl text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
             >
               Logout
             </button>,
@@ -61,7 +61,7 @@ const Navbar = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center">
         <Link
           href="/"
-          className="flex justify-center items-center mr-2 lg:mr-4 text-ld sm:text-xl md:text-2xl gap-2 sm:gap-4 text-[#00553a]"
+          className="flex justify-center items-center mr-2 lg:mr-4 text-ld sm:text-xl md:text-2xl gap-1 sm:gap-4 text-[#00553a]"
         >
           <Image src={Logo} alt="logo" className="w-fit h-8 sm:h-10 md:h-12" />
           <div className="shrink-0">Machine Hunt</div>
