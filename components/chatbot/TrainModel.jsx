@@ -1,23 +1,37 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import axios from "axios";
 
 const TrainModel = () => {
   const steps = ["Customer Info", "Shipping Info", "Payment"];
   const [currentStep, setCurrentStep] = useState(1);
   const [complete, setComplete] = useState(false);
+  const [file, setFile] = useState(null);
+
+  const onFileChange = async (e) => {
+    const formData = new FormData();
+    formData.append("file", e.target.files[0]);
+    const { data } = await axios.post("/api/upload", formData);
+    console.log(data);
+  };
 
   return (
     <div className="py-5 flex flex-col justify-center items-center my-auto">
       <Head>
         <title>Chatbot | Train Model</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Machine Hunt provides different programming languages to build your model. build your model with your preferred language."
+          content="The model will be trained here. The dataset files will be uploaded, the model will be trained accordingly and then the processed file can be downloaded."
         />
       </Head>
       <div className="flex justify-center items-start gap-16 border-2 p-10">
         <div>
-          <div className="flex flex-col items-center justify-center bg-gray-700 border-gray-500 min-w-[16rem] h-[5rem] rounded-lg">
+          <label
+            htmlFor="dropzone-file"
+            className="flex flex-col items-center justify-center bg-gray-700 border-gray-500 min-w-[16rem] h-[5rem] rounded-lg"
+          >
             <svg
               className="w-10 h-10 text-gray-400"
               fill="none"
@@ -29,8 +43,15 @@ const TrainModel = () => {
                 d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
               ></path>
             </svg>
-            {/* <input id="dropzone-file" type="file" className="hidden" /> */}
-          </div>
+            <input
+              id="dropzone-file"
+              type="file"
+              className="hidden"
+              onChange={onFileChange}
+              accept="application/json"
+              required
+            />
+          </label>
           <div className="flex flex-col items-center justify-center pt-5 pb-6">
             <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
               <span className="font-semibold">Click to upload</span>
@@ -40,7 +61,7 @@ const TrainModel = () => {
             </p>
           </div>
         </div>
-        <div>
+        {/* <div>
           <label
             htmlFor="dropzone-file"
             className="flex flex-col items-center justify-center bg-gray-700 border-gray-500 min-w-[16rem] h-[5rem] rounded-lg"
@@ -66,8 +87,8 @@ const TrainModel = () => {
               Do not reload the page or back button
             </p>
           </div>
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <label
             htmlFor="dropzone-file"
             className="flex flex-col items-center justify-center bg-gray-700 border-gray-500 min-w-[16rem] h-[5rem] rounded-lg"
@@ -93,7 +114,7 @@ const TrainModel = () => {
               Download the zip folder
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <div className="flex justify-between flex-col">
         {steps?.map((step, i) => (

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { StateContext } from "../../../context/StateContext";
-import CmdSnippet from "../../CmdSnippet";
+import { StateContext } from "../../context/StateContext";
+import CmdSnippet from "../CmdSnippet";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -13,9 +13,11 @@ const Api = () => {
     <div className="my-5 p-8 sm:mb-auto flex flex-col justify-center items-start w-full max-w-7xl border-2 border-gray-200/60 shadow-inner rounded-xl">
       <Head>
         <title>Chatbot | API</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Machine Hunt provides different programming languages to build your model. build your model with your preferred language."
+          content="Machine Hunt helps you build your machine learning based models. The website will provide you API key for selected machine."
         />
       </Head>
       <div className="mt-5 sm:text-lg md:text-2xl font-semibold text-[#00553a]/90">
