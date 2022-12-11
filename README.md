@@ -28,6 +28,7 @@ One stop solution to all the hunting for Machine Learning Models. You can build 
 ## Prerequisites
 
 #### Install [Node js](https://nodejs.org/en/)
+#### Install NPM Package
 
 ```bash
   npm install npm@latest -g
