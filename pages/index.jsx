@@ -36,13 +36,13 @@ const Index = () => {
         Here is the place to stop hunting and get the solution
       </div>
       <div className="mt-4 max-w-5xl sm:text-lg text-center text-gray-900">
-        Here is a one stop solution to all your hunting for{" "}
+        One stop solution to all the hunting for{" "}
         <b className="text-[#00553a]/80">Machine Learning Models</b>. You can
         build your own model with few steps which are easy to understand and
         implement. We will provide you with adequate{" "}
         <b className="text-[#00553a]/80">Documentation</b> and{" "}
         <b className="text-[#00553a]/80">Demonstration</b>. You can use our{" "}
-        <b className="text-[#00553a]/80">API</b> and also train the model here.
+        <b className="text-[#00553a]/80">API KEY</b> and also train the model here.
       </div>
       <div className="flex flex-wrap justify-center gap-4 mt-6 md:mt-8 lg:mt-10 max-w-7xl">
         {Machines.map(({ title, description, link }, index) => (
