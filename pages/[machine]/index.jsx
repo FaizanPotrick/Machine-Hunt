@@ -8,18 +8,6 @@ import Head from "next/head";
 const Machine = () => {
   const { Machines } = useContext(StateContext);
   const { machine } = useRouter().query;
-  const Languages = [
-    {
-      title: "Node",
-      description: `function MachineHunt( ) {\r\n\tconsole.log("Welcome to Machine Hunt");\r\n}`,
-      link: `/${machine}/node/docs`,
-    },
-    {
-      title: "Python",
-      description: `def MachineHunt( user ):\r\n\tprint("Hello"+" "+user)\r\n\tprint("Welcome to Machine Hunt")`,
-      link: `/${machine}/python/docs`,
-    },
-  ];
 
   return Machines.find((e) => e.tag === machine) ? (
     <div className="py-5 flex flex-col justify-center items-center my-auto w-full">
@@ -46,7 +34,18 @@ const Machine = () => {
         Choose your Preferred Coding Language to construct the Model.
       </div>
       <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-6 mt-6 md:mt-8 lg:mt-10 w-full">
-        {Languages.map(({ title, description, link }, index) => (
+        {[
+          {
+            title: "Node",
+            description: `function MachineHunt( ) {\r\n\tconsole.log("Welcome to Machine Hunt");\r\n}`,
+            link: `/${machine}/node/docs`,
+          },
+          {
+            title: "Python",
+            description: `def MachineHunt( user ):\r\n\tprint("Hello"+" "+user)\r\n\tprint("Welcome to Machine Hunt")`,
+            link: `/${machine}/python/docs`,
+          },
+        ].map(({ title, description, link }, index) => (
           <Link
             href={link}
             key={index}
