@@ -1,30 +1,10 @@
 import * as tf from "@tensorflow/tfjs";
 import { split_sentences, words_to_binary } from "./de_contract";
-import fs from "fs";
 
-const train_model = async (
-  dataset,
-  words_path = "",
-  classes_path = "",
-  model_path = ""
-) => {
+const train_model = async (dataset) => {
   const { words, classes, documents } = split_sentences(dataset);
-
   const { train_x, train_y } = words_to_binary(words, classes, documents);
-  fs.writeFile(words_path + "words.json", JSON.stringify(words), (err) => {
-    if (err) {
-      console.log(err);
-    }
-  });
-  fs.writeFile(
-    classes_path + "classes.json",
-    JSON.stringify(classes),
-    (err) => {
-      if (err) {
-        console.log(err);
-      }
-    }
-  );
+
   const model = tf.sequential();
   model.add(
     tf.layers.dense({
@@ -58,7 +38,8 @@ const train_model = async (
     batchSize: 15,
   });
 
-  model.save("file://" + model_path, history);
+  await model.save("downloads://model", history);
+  return { words, classes };
 };
 
 export default train_model;

@@ -19,34 +19,34 @@ const StateProvider = ({ children }) => {
         "A chatbot that simulates human conversation through text or voice interactions.",
       link: "/chatbot",
     },
-    {
-      title: "Image Recognition",
-      tag: "image-recognition",
-      description:
-        "The ability of model to identify objects, places, people and actions in images.",
-      link: "/chatbots",
-    },
-    {
-      title: "Movie Recommendation",
-      tag: "movie-recommendation",
-      description:
-        "An approach to filtering or predicting the user's preferences based on their choices.",
-      link: "/chatbots",
-    },
-    {
-      title: "Text Recognition",
-      tag: "text-recognition",
-      description:
-        "A system that recognizes text inside images and converts it into an electronic form.",
-      link: "/chatbots",
-    },
-    {
-      title: "Book Recommendation",
-      tag: "book-recommendation",
-      description:
-        "A system that filters books by predicting ratings or preferences of readers.",
-      link: "/chatbots",
-    },
+    // {
+    //   title: "Image Recognition",
+    //   tag: "image-recognition",
+    //   description:
+    //     "The ability of model to identify objects, places, people and actions in images.",
+    //   link: "/chatbots",
+    // },
+    // {
+    //   title: "Movie Recommendation",
+    //   tag: "movie-recommendation",
+    //   description:
+    //     "An approach to filtering or predicting the user's preferences based on their choices.",
+    //   link: "/chatbots",
+    // },
+    // {
+    //   title: "Text Recognition",
+    //   tag: "text-recognition",
+    //   description:
+    //     "A system that recognizes text inside images and converts it into an electronic form.",
+    //   link: "/chatbots",
+    // },
+    // {
+    //   title: "Book Recommendation",
+    //   tag: "book-recommendation",
+    //   description:
+    //     "A system that filters books by predicting ratings or preferences of readers.",
+    //   link: "/chatbots",
+    // },
   ];
 
   return (
