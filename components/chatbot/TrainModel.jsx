@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Head from "next/head";
 import train_model from "../../machine/chatbot/react/create_model";
 import { StateContext } from "../../context/StateContext";
+import Link from "next/link";
 
 const TrainModel = () => {
   const { setLoading, setAlert } = useContext(StateContext);
@@ -19,8 +20,8 @@ const TrainModel = () => {
 
   const Tain_Model = async (e) => {
     const { files } = e.target;
-    setLoading(true);
     if (files[0].size > 500000) {
+      setLoading(false);
       return setAlert({
         isAlert: true,
         type: "error",
@@ -28,6 +29,7 @@ const TrainModel = () => {
       });
     }
     if (files[0].type !== "application/json") {
+      setLoading(false);
       return setAlert({
         isAlert: true,
         type: "error",
@@ -38,16 +40,26 @@ const TrainModel = () => {
     fileReader.readAsText(files[0], "UTF-8");
     fileReader.onload = async (e) => {
       const dataset = JSON.parse(e.target.result);
-      const dataset_verify = dataset.every((parameter) => {
-        return (
-          parameter.tag &&
-          parameter.patterns &&
-          parameter.patterns.length > 0 &&
-          parameter.responses &&
-          parameter.responses.length > 0
-        );
-      });
-      if (!dataset_verify) {
+      try {
+        const dataset_verify = dataset.every((parameter) => {
+          return (
+            parameter.tag &&
+            parameter.patterns &&
+            parameter.patterns.length > 0 &&
+            parameter.responses &&
+            parameter.responses.length > 0
+          );
+        });
+        if (!dataset_verify) {
+          setLoading(false);
+          return setAlert({
+            isAlert: true,
+            type: "error",
+            message: "Invalid Parameters",
+          });
+        }
+      } catch (err) {
+        setLoading(false);
         return setAlert({
           isAlert: true,
           type: "error",
@@ -83,13 +95,13 @@ const TrainModel = () => {
           content="The model will be trained here. The dataset files will be uploaded, the model will be trained accordingly and then the processed file can be downloaded."
         />
       </Head>
-      <div className="flex items-center justify-center w-full">
+      <div className="flex flex-col items-center justify-center w-full">
         <label
           htmlFor="drop-file"
-          className="flex flex-col items-center justify-center w-full max-w-lg h-52 rounded-xl cursor-pointer bg-[#0e8f66]/20 shadow-inner drop-shadow-md text-[#00553a] duration-300 hover:scale-95"
+          className="flex flex-col items-center justify-center w-full max-w-2xl py-5 sm:py-8 px-4 rounded-xl cursor-pointer bg-[#0e8f66]/20 shadow-inner drop-shadow-md text-[#00553a] duration-300 hover:scale-95"
         >
           <svg
-            className="w-10 h-10 mb-3"
+            className="w-12 sm:w-14 h-12 sm:h-14 mb-3"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -99,12 +111,23 @@ const TrainModel = () => {
               d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
             ></path>
           </svg>
-          <div className="sm:text-lg font-semibold">Click to upload</div>
-          <div className="text-xs sm:text-sm">JSON (MAX. 500KB)</div>
+          <div className="text-lg sm:text-xl font-semibold text-center uppercase">
+            click here to upload your dataset
+          </div>
+          <div className="text-xs sm:text-sm uppercase">JSON (MAX 500KB)</div>
+          <div className="mt-10 sm:text-lg font-semibold">File Format</div>
+          <pre className="text-sm sm:text-base">
+            <code>
+              {`[\n\t{\n\t\ttag: "...",\n\t\tpatterns: [...],\n\t\tresponses: [...]\n\t},\n\t...\n]`}
+            </code>
+          </pre>
           <input
             id="drop-file"
             type="file"
-            onChange={Tain_Model}
+            onChange={(e) => {
+              setLoading(true);
+              Tain_Model(e);
+            }}
             accept="application/json"
             hidden
             required
