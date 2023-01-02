@@ -1,6 +1,10 @@
 import * as tf from "@tensorflow/tfjs";
 import { replace } from "./de_contract";
-import dataset from "./dataset";
+import bots from "../dataset/bots.json";
+import general from "../dataset/general.json";
+import swears from "../dataset/swears.json";
+
+const dataset = [...bots, ...general, ...swears];
 
 const bag_of_words = (message) => {
   const words = require("./words.json");
