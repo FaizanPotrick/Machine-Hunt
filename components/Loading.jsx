@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import { StateContext } from "../context/StateContext";
 
-const Loading = () => {
+const Loading = ({ pageLoading }) => {
   const { loading } = useContext(StateContext);
-
   return (
     <>
-      {loading && (
-        <div className="fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-white/90 z-[9999]">
+      {(loading || pageLoading) && (
+        <div
+          className={`fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center ${
+            loading ? "bg-white/90" : "bg-white/90"
+          } z-[9999]`}
+        >
           <svg
             className="w-12 sm:w-16 h-12 sm:h-16 animate-spin fill-[#00553a]"
             viewBox="0 0 100 101"
