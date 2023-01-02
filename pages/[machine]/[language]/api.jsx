@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { StateContext } from "../../context/StateContext";
-import CmdSnippet from "../CmdSnippet";
+import { StateContext } from "../../../context/StateContext";
+import CmdSnippet from "../../../components/CmdSnippet";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -12,7 +12,13 @@ const Api = () => {
   return (
     <div className="my-5 p-8 sm:mb-auto flex flex-col justify-center items-start w-full max-w-7xl border-2 border-gray-200/60 shadow-inner rounded-xl">
       <Head>
-        <title>Chatbot | API</title>
+        <title>
+          {Machines.map(({ title, tag }) => {
+            if (tag === machine) {
+              return title + " | API";
+            }
+          })}
+        </title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
@@ -80,15 +86,7 @@ const Api = () => {
         <li>Enter your own &quot;MESSAGE&quot; and get a response.</li>
       </ul>
       <CmdSnippet
-        command={"https://machinehunt.vercel.app/api/chatbot/API_KEY/MESSAGE"}
-      />
-      <div className="mt-3 w-full text-sm sm:text-base font-medium text-gray-600">
-        Example:
-      </div>
-      <CmdSnippet
-        command={
-          "https://machinehunt.vercel.app/api/chatbot/MDLom5KaiT5z3hQ6yuCLCe8u/hello"
-        }
+        command={`https://machinehunt.vercel.app/api/${machine}/API_KEY/MESSAGE`}
       />
       <div className="mt-5 text-sm sm:text-base md:text-lg font-medium text-gray-600">
         Send an API request through Thunder Client or Postman

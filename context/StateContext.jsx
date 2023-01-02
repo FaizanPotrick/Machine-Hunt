@@ -19,18 +19,18 @@ const StateProvider = ({ children }) => {
         "A chatbot that simulates human conversation through text or voice interactions.",
       link: "/chatbot",
     },
+    {
+      title: "Recommendation System",
+      tag: "recommendation system",
+      description:
+        "An approach to filtering or predicting the user's preferences based on their choices.",
+      link: "/recommendation system",
+    },
     // {
     //   title: "Image Recognition",
     //   tag: "image-recognition",
     //   description:
     //     "The ability of model to identify objects, places, people and actions in images.",
-    //   link: "/chatbots",
-    // },
-    // {
-    //   title: "Movie Recommendation",
-    //   tag: "movie-recommendation",
-    //   description:
-    //     "An approach to filtering or predicting the user's preferences based on their choices.",
     //   link: "/chatbots",
     // },
     // {
