@@ -3,17 +3,8 @@ import random
 import numpy as np
 
 def replace(message):
-    message = re.sub(r"'t", " not", message)
-    message = re.sub(r"'re", " are", message)
-    message = re.sub(r"'s", " is", message)
-    message = re.sub(r"'d", " would", message)
-    message = re.sub(r"'ll", " will", message)
-    message = re.sub(r"'t", " not", message)
-    message = re.sub(r"'ve", " have", message)
-    message = re.sub(r"'m", " am", message)
-    message = re.sub( r"[?,:,|,!,\",',(,),*,+,\,,\-,.,/,;,[,\],^,_,{,}]", "", message)
-    message = re.sub("\s\s+", " ", message)
     message = message.lower()
+    message = re.sub(r"[?,:,|,!,\",',(,),*,+,\,,\-,.,/,;,[,\],^,_,{,}]", "", message)
     return message
 
 
@@ -22,14 +13,20 @@ def split_sentences(datasets):
     classes = []
     documents = []
 
-    for intent in datasets:
-        for pattern in intent["patterns"]:
-            pattern = replace(pattern)
-            pattern = pattern.split()
-            words.extend(pattern)
-            documents.append((pattern, intent["tag"]))
-            if intent["tag"] not in classes:
-                classes.append(intent["tag"])
+    for dataset in datasets:
+        pattern = [*dataset["genres"],*dataset["keywords"]]
+
+        new_pattern = []
+        for p in pattern:
+            p = p.split()
+            p = [replace(word) for word in p]
+            new_pattern.extend(p)
+
+        pattern = new_pattern
+        words.extend(pattern)
+        documents.append((pattern, dataset["title"]))
+        if dataset["title"] not in classes:
+            classes.append(dataset["title"])
 
     words = sorted(set(words))
     classes = sorted(set(classes))

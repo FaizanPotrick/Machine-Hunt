@@ -1,5 +1,4 @@
 import numpy as np
-import random
 from tensorflow.keras.models import load_model
 import json
 from de_contract import *
@@ -26,14 +25,7 @@ def predict_class(message):
         classes = json.load(file)
     
     response = model.predict(np.array([bag_of_words(message)]))[0]
-    results = [[i, r] for i, r in enumerate(response) if r > 0.05]
+    results = [[i, r] for i, r in enumerate(response)]
     results.sort(key=lambda x: x[1], reverse=True)
 
-    return classes[results[0][0]]
-
-
-def get_response(message, dataset):
-    tag = predict_class(message)
-    for data in dataset:
-        if data['tag'] == tag:
-            return random.choice(data['responses'])
+    return [classes[r[0]] for r in results[:5]]

@@ -27,6 +27,6 @@ def train_model(dataset):
                   optimizer="adam", metrics=["accuracy"])
 
     history = model.fit(np.array(train_x), np.array(
-        train_y), epochs=len(train_x[0]), batch_size=15)
+        train_y), epochs=300, batch_size=15)
 
     model.save("model.h5", history)
