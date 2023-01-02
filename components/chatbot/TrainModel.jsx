@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import Head from "next/head";
 import train_model from "../../machine/chatbot/react/create_model";
 import { StateContext } from "../../context/StateContext";
-import Link from "next/link";
 
 const TrainModel = () => {
   const { setLoading, setAlert } = useContext(StateContext);
@@ -18,8 +17,7 @@ const TrainModel = () => {
     a.click();
   };
 
-  const Tain_Model = async (e) => {
-    const { files } = e.target;
+  const CheckFile = (files) => {
     if (files[0].size > 500000) {
       setLoading(false);
       return setAlert({
@@ -36,29 +34,23 @@ const TrainModel = () => {
         message: "Invalid file type",
       });
     }
-    const fileReader = new FileReader();
-    fileReader.readAsText(files[0], "UTF-8");
-    fileReader.onload = async (e) => {
-      const dataset = JSON.parse(e.target.result);
-      try {
-        const dataset_verify = dataset.every((parameter) => {
-          return (
-            parameter.tag &&
+  };
+
+  const Parameters_Verify = (dataset) => {
+    try {
+      const dataset_verify = dataset.every((parameter) => {
+        return (
+          (parameter.tag &&
             parameter.patterns &&
-            parameter.patterns.length > 0 &&
-            parameter.responses &&
-            parameter.responses.length > 0
-          );
-        });
-        if (!dataset_verify) {
-          setLoading(false);
-          return setAlert({
-            isAlert: true,
-            type: "error",
-            message: "Invalid Parameters",
-          });
-        }
-      } catch (err) {
+            parameter.patterns.length > 0) ||
+          (parameter.title &&
+            parameter.genres &&
+            parameter.genres.length > 0 &&
+            parameter.keywords &&
+            parameter.keywords.length > 0)
+        );
+      });
+      if (!dataset_verify) {
         setLoading(false);
         return setAlert({
           isAlert: true,
@@ -66,6 +58,24 @@ const TrainModel = () => {
           message: "Invalid Parameters",
         });
       }
+    } catch (err) {
+      setLoading(false);
+      return setAlert({
+        isAlert: true,
+        type: "error",
+        message: "Invalid Parameters",
+      });
+    }
+  };
+
+  const Tain_Model = async (e) => {
+    const { files } = e.target;
+    await CheckFile(files);
+    const fileReader = new FileReader();
+    fileReader.readAsText(files[0], "UTF-8");
+    fileReader.onload = async (e) => {
+      const dataset = JSON.parse(e.target.result);
+      await Parameters_Verify(dataset);
       setLoading(false);
       setIsProcessing(true);
       try {
@@ -118,7 +128,7 @@ const TrainModel = () => {
           <div className="mt-10 sm:text-lg font-semibold">File Format</div>
           <pre className="text-sm sm:text-base">
             <code>
-              {`[\n\t{\n\t\ttag: "...",\n\t\tpatterns: [...],\n\t\tresponses: [...]\n\t},\n\t...\n]`}
+              {`{\n\ttag: "...",\n\tpatterns: [...],\n}`}
             </code>
           </pre>
           <input

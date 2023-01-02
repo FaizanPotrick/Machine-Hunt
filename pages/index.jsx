@@ -7,7 +7,6 @@ import { StateContext } from "../context/StateContext";
 
 const Index = () => {
   const { Machines } = useContext(StateContext);
-
   return (
     <div className="py-5 flex flex-col justify-center items-center my-auto">
       <Head>
@@ -22,6 +21,13 @@ const Index = () => {
           and also train the model here"
         />
       </Head>
+      <style jsx>
+        {`
+          b {
+            color: rgb(0 85 58 / 0.8);
+          }
+        `}
+      </style>
       <div className="flex flex-col gap-2 sm:gap-3 justify-center items-center">
         <Image
           src={logo}
@@ -36,13 +42,11 @@ const Index = () => {
         Here is the place to stop hunting and get the solution
       </div>
       <div className="mt-4 max-w-5xl sm:text-lg text-center text-gray-900">
-        One stop solution to all the hunting for{" "}
-        <b className="text-[#00553a]/80">Machine Learning Models</b>. You can
-        build your own model with few steps which are easy to understand and
-        implement. We will provide you with adequate{" "}
-        <b className="text-[#00553a]/80">Documentation</b> and{" "}
-        <b className="text-[#00553a]/80">Demonstration</b>. You can use our{" "}
-        <b className="text-[#00553a]/80">API KEY</b> and also train the model here.
+        One stop solution to all the hunting for <b>Machine Learning Models</b>.
+        You can build your own model with few steps which are easy to understand
+        and implement. We will provide you with adequate <b>Documentation</b>{" "}
+        and <b>Demonstration</b>. You can use our <b>API KEY</b> and also train
+        the model here.
       </div>
       <div className="flex flex-wrap justify-center gap-4 mt-6 md:mt-8 lg:mt-10 max-w-7xl">
         {Machines.map(({ title, description, link }, index) => (

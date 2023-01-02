@@ -152,7 +152,7 @@ const Docs = () => {
           <ul className="list-disc pl-5 mt-2 w-full text-sm sm:text-base font-medium text-gray-600">
             <li>Create server.js</li>
           </ul>
-          <FileSnippet file={"chatbot/node/server.js"} />
+          <FileSnippet file={"server.js"} />
           <div className="mt-2 text-sm sm:text-base font-medium text-gray-600">
             Run the server
           </div>
@@ -175,7 +175,7 @@ const Docs = () => {
           <ul className="list-disc pl-5 mt-2 w-full text-sm sm:text-base font-medium text-gray-600">
             <li>Create main.py</li>
           </ul>
-          <FileSnippet file={"chatbot/python/main.py"} />
+          <FileSnippet file={"main.py"} />
           <div className="mt-2 text-sm sm:text-base font-medium text-gray-600">
             Run main.py
           </div>
