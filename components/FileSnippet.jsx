@@ -12,8 +12,12 @@ const FileSnippet = ({ file }) => {
 
   useEffect(() => {
     const fetchCode = async () => {
-      const { data } = await axios.post("/api/file", { file });
-      setCode(data);
+      try {
+        const { data } = await axios.post("/api/file", { file });
+        setCode(data);
+      } catch (err) {
+        setCode(err.response.data);
+      }
     };
     fetchCode();
   }, []);
