@@ -8,14 +8,14 @@ export const split_sentences = (datasets) => {
   let words = [];
   let classes = [];
   const documents = [];
-  for (dataset of datasets) {
+  for (const dataset of datasets) {
     let pattern = [...dataset.genres, ...dataset.keywords];
 
     const new_pattern = [];
-    for (p of pattern) {
+    for (let p of pattern) {
       p = p.split(" ");
       p = p.map((word) => replace(word));
-      new_pattern.extend(p);
+      new_pattern.push(...p);
     }
 
     pattern = new_pattern;
