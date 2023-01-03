@@ -8,7 +8,8 @@ import { deleteCookie } from "cookies-next";
 
 const Navbar = () => {
   const { isLogin, setIsLogin, Machines } = useContext(StateContext);
-  const { machine, language, component } = useRouter().query;
+  const router = useRouter();
+  const { machine, language } = router.query;
 
   const [Links, setLinks] = useState([]);
   useEffect(() => {
@@ -75,7 +76,8 @@ const Navbar = () => {
             <Link
               href={`/${machine}/${language}/docs`}
               className={`${
-                component === "docs" && "text-[#00553a]"
+                router.asPath === `/${machine}/${language}/docs` &&
+                "text-[#00553a]"
               } hover:text-[#00553a] duration-300`}
             >
               Docs
@@ -83,7 +85,8 @@ const Navbar = () => {
             <Link
               href={`/${machine}/${language}/demo`}
               className={`${
-                component === "demo" && "text-[#00553a]"
+                router.asPath === `/${machine}/${language}/demo` &&
+                "text-[#00553a]"
               } hover:text-[#00553a] duration-300`}
             >
               Demo
@@ -91,15 +94,17 @@ const Navbar = () => {
             <Link
               href={`/${machine}/${language}/api`}
               className={`${
-                component === "api" && "text-[#00553a]"
+                router.asPath === `/${machine}/${language}/api` &&
+                "text-[#00553a]"
               } hover:text-[#00553a] duration-300`}
             >
               API
             </Link>
             <Link
-              href={`/${machine}/${language}/training`}
+              href={`/${machine}/${language}/train model`}
               className={`${
-                component === "training" && "text-[#00553a]"
+                router.asPath === `/${machine}/${language}/train model` &&
+                "text-[#00553a]"
               } hover:text-[#00553a] duration-300`}
             >
               Train Model
