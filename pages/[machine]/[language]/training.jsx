@@ -110,7 +110,7 @@ const Training = () => {
         <title>
           {Machines.map(({ title, tag }) => {
             if (tag === machine) {
-              return title + " | Training";
+              return "Training | " + title;
             }
           })}
         </title>

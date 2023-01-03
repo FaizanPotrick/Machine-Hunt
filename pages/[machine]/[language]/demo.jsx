@@ -31,12 +31,11 @@ const Demo = () => {
       title: "Hi, KIWI here, How may I help you :)",
       button: [
         "Avatar",
+        "Spider Man",
         "Iron Man",
+        "Hulk",
         "Captain America",
         "Thor",
-        "Hulk",
-        "Black Widow",
-        "Hawkeye",
       ],
     },
   };
@@ -65,7 +64,7 @@ const Demo = () => {
         <title>
           {Machines.map(({ title, tag }) => {
             if (tag === machine) {
-              return title + " | Demonstration";
+              return "Demonstration | " + title;
             }
           })}
         </title>

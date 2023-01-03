@@ -16,7 +16,7 @@ const Api = () => {
         <title>
           {Machines.map(({ title, tag }) => {
             if (tag === machine) {
-              return title + " | API";
+              return "API | " + title;
             }
           })}
         </title>
