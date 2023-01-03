@@ -48,7 +48,7 @@ const Demo = () => {
     try {
       const { data } = await axios.get(`/api/${machine}/454556/${message}`);
       setResponse({
-        data: [data],
+        data: typeof data === "string" ? [data] : data,
         loading: false,
       });
     } catch (err) {
@@ -115,14 +115,16 @@ const Demo = () => {
           Response
         </div>
         {!response.loading ? (
-          response.data.map((data, index) => (
-            <div
-              key={index}
-              className="border-2 border-[#0e8f66]/20 shadow-lg duration-500 rounded-xl bg-[#0e8f66]/[0.15] px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-medium text-[#00553a]"
-            >
-              {data}
-            </div>
-          ))
+          <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 max-w-xl">
+            {response.data.map((data, index) => (
+              <div
+                key={index}
+                className="border-2 border-[#0e8f66]/20 shadow-lg duration-500 rounded-xl bg-[#0e8f66]/[0.15] px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-medium text-[#00553a]"
+              >
+                {data}
+              </div>
+            ))}
+          </div>
         ) : (
           <div className="text-[#00553a] py-[16px] sm:py-5 flex items-center justify-center gap-2">
             <div className="w-2 h-2 bg-[#00553a] rounded-full delay-75 animate-bounce" />
