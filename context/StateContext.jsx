@@ -15,6 +15,7 @@ const StateProvider = ({ children }) => {
     {
       title: "ChatBot",
       tag: "chatbot",
+      language: ["node", "python"],
       description:
         "A chatbot that simulates human conversation through text or voice interactions.",
       link: "/chatbot",
@@ -22,6 +23,7 @@ const StateProvider = ({ children }) => {
     {
       title: "Recommendation System",
       tag: "recommendation system",
+      language: ["node", "python"],
       description:
         "An approach to filtering or predicting the user's preferences based on their choices.",
       link: "/recommendation system",

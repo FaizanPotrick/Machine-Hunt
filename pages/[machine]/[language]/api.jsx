@@ -8,9 +8,11 @@ import PageNotFound from "../../404";
 
 const Api = () => {
   const { Machines } = useContext(StateContext);
-  const { machine } = useRouter().query;
+  const { machine, language } = useRouter().query;
 
-  return Machines.find((e) => e.tag === machine) ? (
+  return Machines.find(
+    (e) => e.tag === machine && e.language.includes(language)
+  ) ? (
     <div className="my-5 p-8 sm:mb-auto flex flex-col justify-center items-start w-full max-w-7xl border-2 border-gray-200/60 shadow-inner rounded-xl">
       <Head>
         <title>

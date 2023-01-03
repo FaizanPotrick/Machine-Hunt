@@ -71,46 +71,50 @@ const Navbar = () => {
           <div className="shrink-0">Machine Hunt</div>
         </Link>
 
-        {Machines.find((e) => e.tag === machine) && machine && language && (
-          <div className="flex items-center justify-center gap-4 lg:border-l-2 pl-2 lg:pl-4 text-sm sm:text-base md:text-lg text-[#00553a]/70 absolute left-10 lg:left-0 right-10 lg:right-0 bottom-0 lg:relative">
-            <Link
-              href={`/${machine}/${language}/docs`}
-              className={`${
-                router.asPath === `/${machine}/${language}/docs` &&
-                "text-[#00553a]"
-              } hover:text-[#00553a] duration-300`}
-            >
-              Docs
-            </Link>
-            <Link
-              href={`/${machine}/${language}/demo`}
-              className={`${
-                router.asPath === `/${machine}/${language}/demo` &&
-                "text-[#00553a]"
-              } hover:text-[#00553a] duration-300`}
-            >
-              Demo
-            </Link>
-            <Link
-              href={`/${machine}/${language}/api`}
-              className={`${
-                router.asPath === `/${machine}/${language}/api` &&
-                "text-[#00553a]"
-              } hover:text-[#00553a] duration-300`}
-            >
-              API
-            </Link>
-            <Link
-              href={`/${machine}/${language}/train model`}
-              className={`${
-                router.asPath === `/${machine}/${language}/train model` &&
-                "text-[#00553a]"
-              } hover:text-[#00553a] duration-300`}
-            >
-              Train Model
-            </Link>
-          </div>
-        )}
+        {Machines.find(
+          (e) => e.tag === machine && e.language.includes(language)
+        ) &&
+          machine &&
+          language && (
+            <div className="flex items-center justify-center gap-4 lg:border-l-2 pl-2 lg:pl-4 text-sm sm:text-base md:text-lg text-[#00553a]/70 absolute left-10 lg:left-0 right-10 lg:right-0 bottom-0 lg:relative">
+              <Link
+                href={`/${machine}/${language}/docs`}
+                className={`${
+                  router.asPath === `/${machine}/${language}/docs` &&
+                  "text-[#00553a]"
+                } hover:text-[#00553a] duration-300`}
+              >
+                Docs
+              </Link>
+              <Link
+                href={`/${machine}/${language}/demo`}
+                className={`${
+                  router.asPath === `/${machine}/${language}/demo` &&
+                  "text-[#00553a]"
+                } hover:text-[#00553a] duration-300`}
+              >
+                Demo
+              </Link>
+              <Link
+                href={`/${machine}/${language}/api`}
+                className={`${
+                  router.asPath === `/${machine}/${language}/api` &&
+                  "text-[#00553a]"
+                } hover:text-[#00553a] duration-300`}
+              >
+                API
+              </Link>
+              <Link
+                href={`/${machine}/${language}/train model`}
+                className={`${
+                  router.asPath === `/${machine}/${language}/train model` &&
+                  "text-[#00553a]"
+                } hover:text-[#00553a] duration-300`}
+              >
+                Train Model
+              </Link>
+            </div>
+          )}
       </div>
       <div className="flex justify-center items-center gap-2 sm:gap-4 text-white">
         {Links.map((link, index) => {

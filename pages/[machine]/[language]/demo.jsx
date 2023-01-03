@@ -7,7 +7,7 @@ import PageNotFound from "../../404";
 
 const Demo = () => {
   const { Machines } = useContext(StateContext);
-  const { machine } = useRouter().query;
+  const { machine, language } = useRouter().query;
 
   const [message, setMessage] = useState("");
   const [response, setResponse] = useState({
@@ -58,7 +58,9 @@ const Demo = () => {
     }
   };
 
-  return Machines.find((e) => e.tag === machine) ? (
+  return Machines.find(
+    (e) => e.tag === machine && e.language.includes(language)
+  ) ? (
     <div className="py-5 flex flex-col justify-center items-center my-auto w-full">
       <Head>
         <title>
