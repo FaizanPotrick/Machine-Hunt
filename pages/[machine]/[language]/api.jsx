@@ -4,12 +4,13 @@ import CmdSnippet from "../../../components/CmdSnippet";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import PageNotFound from "../../404";
 
 const Api = () => {
   const { Machines } = useContext(StateContext);
   const { machine } = useRouter().query;
 
-  return (
+  return Machines.find((e) => e.tag === machine) ? (
     <div className="my-5 p-8 sm:mb-auto flex flex-col justify-center items-start w-full max-w-7xl border-2 border-gray-200/60 shadow-inner rounded-xl">
       <Head>
         <title>
@@ -92,6 +93,8 @@ const Api = () => {
         Send an API request through Thunder Client or Postman
       </div>
     </div>
+  ) : (
+    <PageNotFound />
   );
 };
 

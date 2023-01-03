@@ -3,6 +3,7 @@ import { StateContext } from "../../../context/StateContext";
 import axios from "axios";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import PageNotFound from "../../404";
 
 const Demo = () => {
   const { Machines } = useContext(StateContext);
@@ -58,7 +59,7 @@ const Demo = () => {
     }
   };
 
-  return (
+  return Machines.find((e) => e.tag === machine) ? (
     <div className="py-5 flex flex-col justify-center items-center my-auto w-full">
       <Head>
         <title>
@@ -141,6 +142,8 @@ const Demo = () => {
         )}
       </div>
     </div>
+  ) : (
+    <PageNotFound />
   );
 };
 

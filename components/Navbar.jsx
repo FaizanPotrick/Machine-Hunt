@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { deleteCookie } from "cookies-next";
 
 const Navbar = () => {
-  const { isLogin, setIsLogin } = useContext(StateContext);
+  const { isLogin, setIsLogin, Machines } = useContext(StateContext);
   const { machine, language, component } = useRouter().query;
 
   const [Links, setLinks] = useState([]);
@@ -55,7 +55,10 @@ const Navbar = () => {
   return (
     <div
       className={`relative w-full flex justify-around items-center font-semibold ${
-        machine && language && "pb-10"
+        Machines.find((e) => e.tag === machine) &&
+        machine &&
+        language &&
+        "pb-10"
       } lg:p-0`}
     >
       <div className="flex flex-col lg:flex-row justify-center items-center">
@@ -67,7 +70,7 @@ const Navbar = () => {
           <div className="shrink-0">Machine Hunt</div>
         </Link>
 
-        {machine && language && (
+        {Machines.find((e) => e.tag === machine) && machine && language && (
           <div className="flex items-center justify-center gap-4 lg:border-l-2 pl-2 lg:pl-4 text-sm sm:text-base md:text-lg text-[#00553a]/70 absolute left-10 lg:left-0 right-10 lg:right-0 bottom-0 lg:relative">
             <Link
               href={`/${machine}/${language}/docs`}
