@@ -1,0 +1,22 @@
+[
+    {
+        "sentiment": "Worry",
+        "content": "Why am i so tired?"
+    },
+    {
+        "sentiment": "Fun",
+        "content": "I want to play parachute games."
+    },
+    {
+        "sentiment": "Happiness",
+        "content": "The weather is so nice! Its a wonderful day."
+    },
+    {
+        "sentiment": "Hate",
+        "content": "And this stupid wireless wont work downstairs"
+    },
+    {
+        "sentiment": "Neutral",
+        "content": "That story reminds of living in Portugal"
+    }
+]
