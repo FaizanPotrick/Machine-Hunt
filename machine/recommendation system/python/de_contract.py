@@ -3,8 +3,11 @@ import random
 import numpy as np
 
 def replace(message):
+    message = re.sub(r"['t,'re,'s,'d,'ll,'ve,'m]", "", message)
+    message = re.sub(r"[#,&,?,:,|,!,\",',(,),*,+,\,,\-,.,/,;,[,\],^,_,{,}]", " ", message)
+    message = re.sub("\s\s+", " ", message)
+    message = re.sub(" ", "", message)
     message = message.lower()
-    message = re.sub(r"[?,:,|,!,\",',(,),*,+,\,,\-,.,/,;,[,\],^,_,{,}]", "", message)
     return message
 
 

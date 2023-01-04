@@ -1,6 +1,16 @@
 const replace = (message) => {
+  message = message
+    .replaceAll("'t", "")
+    .replaceAll("'re", "")
+    .replaceAll("'s", "")
+    .replaceAll("'d", "")
+    .replaceAll("'ll", "")
+    .replaceAll("'ve", "")
+    .replaceAll("'m", "")
+    .replaceAll(/[&\/\\#`,+()$~%.'":*!?<>{}^]/g, " ")
+    .replaceAll(/^\s+|\s+$/g, " ")
+    .replaceAll(" ", "");
   message = message.toLowerCase();
-  message = message.replaceAll(/[&\/\\#`,+()$~%.'":*!?<>{}]/g, "");
   return message;
 };
 
