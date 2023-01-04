@@ -79,11 +79,11 @@ const Dashboard = () => {
         Generate API-KEY
       </div>
       <form
-        className="mt-3 flex flex-wrap gap-4 justify-between items-center w-full border-2 border-[#0e8f66]/10 rounded-xl shadow-inner bg-[#0e8f66]/[0.15] p-2"
+        className="mt-3 flex flex-wrap gap-4 justify-center sm:justify-between items-center w-full border-2 border-[#0e8f66]/10 rounded-xl shadow-inner bg-[#0e8f66]/[0.15] p-2"
         onSubmit={GenerateApiKey}
       >
         <select
-          className="bg-transparent px-2.5 sm:px-5 text-[#00553a]/90 font-medium outline-none cursor-pointer"
+          className="bg-transparent px-2.5 sm:px-5 max-w-[8rem] text-[#00553a]/90 font-medium outline-none cursor-pointer"
           onChange={(e) => {
             setMachine_Name(e.target.value);
           }}
@@ -107,44 +107,43 @@ const Dashboard = () => {
           <div className="text-lg lg:text-xl font-semibold text-[#00553a]/90 mt-12">
             History
           </div>
-          <div className="mt-3 flex flex-col sm:flex-row gap-4 justify-center sm:justify-between items-center w-full px-10 text-[#00553a] font-medium text-sm sm:text-base">
-            <div>Machine</div>
-            <div>API-KEY</div>
-            <div>Delete</div>
-          </div>
           {Dashboard.history.map(({ _id, machine, api_key }, index) => {
             return (
               <div
-                className="mt-3 flex flex-col sm:flex-row gap-4 justify-center sm:justify-between items-center w-full border-2 border-[#0e8f66]/10 rounded-xl shadow-inner bg-[#0e8f66]/[0.15] py-4 px-10 sm:py-2 text-[#00553a] font-medium text-sm sm:text-base"
+                className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center content-center w-full border-2 border-[#0e8f66]/10 rounded-xl shadow-inner bg-[#0e8f66]/[0.15] py-4 px-10 sm:py-2 text-[#00553a] text-sm sm:text-base"
                 key={index}
               >
-                <div>{machine}</div>
-                <div>{api_key}</div>
-                <svg
-                  className="w-6 h-6 text-[#0e8f66]/80 duration-300 hover:scale-105 cursor-pointer"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  onClick={async () => {
-                    setLoading(true);
-                    try {
-                      await axios.delete(`/api/api-key?api_id=${_id}`);
-                      setIsFetch(!isFetch);
-                    } catch (err) {
-                      setLoading(false);
-                      setAlert({
-                        isAlert: true,
-                        type: err.response.data.type,
-                        message: err.response.data.message,
-                      });
-                    }
-                  }}
-                >
-                  <path
-                    strokeWidth="2"
-                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                  ></path>
-                </svg>
+                <div className="w-full text-center md:text-start font-medium">
+                  {machine}
+                </div>
+                <div className="w-full text-center">{api_key}</div>
+                <div className="w-full flex justify-center md:justify-end">
+                  <svg
+                    className="w-6 h-6 text-[#0e8f66]/80 duration-300 hover:scale-105 cursor-pointer"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    onClick={async () => {
+                      setLoading(true);
+                      try {
+                        await axios.delete(`/api/api-key?api_id=${_id}`);
+                        setIsFetch(!isFetch);
+                      } catch (err) {
+                        setLoading(false);
+                        setAlert({
+                          isAlert: true,
+                          type: err.response.data.type,
+                          message: err.response.data.message,
+                        });
+                      }
+                    }}
+                  >
+                    <path
+                      strokeWidth="2"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    ></path>
+                  </svg>
+                </div>
               </div>
             );
           })}
