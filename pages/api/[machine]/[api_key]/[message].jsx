@@ -1,7 +1,10 @@
 import get_chatbot_response from "../../../../machine/chatbot/react/test_model";
 import get_recommendation_system_response from "../../../../machine/recommendation system/react/test_model";
 import get_sentiment_analysis_response from "../../../../machine/sentiment analysis/react/test_model";
+import db from "../../../../db";
+import ApiKey from "../../../../db/ApiKeySchema";
 
+db();
 const MachineModel = {
   chatbot: get_chatbot_response,
   "recommendation system": get_recommendation_system_response,
@@ -20,6 +23,16 @@ const Message = async (req, res) => {
     }
     if (MachineModel[machine] === undefined) {
       return res.status(404).send("Not Found");
+    }
+    const api_response = await ApiKey.findOne({
+      api_key: api_key,
+    });
+    if (api_response === null) {
+      return res.status(400).send("Invalid API Key");
+    }
+    const machine_name = api_response.machine;
+    if (machine_name.toLowerCase() !== machine) {
+      return res.status(400).send("Invalid API Key");
     }
     const response = await MachineModel[machine](message);
     res.status(200).send(response);
