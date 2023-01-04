@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Head from "next/head";
 import chatbot_train_model from "../../../machine/chatbot/react/create_model";
 import recommendation_system_train_model from "../../../machine/recommendation system/react/create_model";
+import text_detection_train_model from "../../../machine/text detection/react/create_model";
 import { StateContext } from "../../../context/StateContext";
 import { useRouter } from "next/router";
 import PageNotFound from "../../404";
@@ -20,6 +21,10 @@ const Training = () => {
     "recommendation system": {
       train_model: recommendation_system_train_model,
       file_format: `{\n\ttitle: "...",\n\tgenres: [...],\n\tkeywords: [...],\n}`,
+    },
+    "text detection": {
+      train_model: text_detection_train_model,
+      file_format: `{\n\tsentiment: "...",\n\tcontent: "...",\n}`,
     },
   };
 
@@ -57,24 +62,38 @@ const Training = () => {
     fileReader.readAsText(files[0], "UTF-8");
     fileReader.onload = async (f) => {
       const dataset = JSON.parse(f.target.result);
-      const dataset_verify = dataset.every((parameter) => {
-        if (machine === "chatbot") {
-          return (
-            parameter.tag && parameter.patterns && parameter.patterns.length > 0
-          );
-        } else if (machine === "recommendation system") {
-          return (
-            parameter.title &&
-            parameter.genres &&
-            parameter.genres.length > 0 &&
-            parameter.keywords &&
-            parameter.keywords.length > 0
-          );
-        } else {
-          return false;
+      try {
+        const dataset_verify = dataset.every((parameter) => {
+          if (machine === "chatbot") {
+            return (
+              parameter.tag &&
+              parameter.patterns &&
+              parameter.patterns.length > 0
+            );
+          } else if (machine === "recommendation system") {
+            return (
+              parameter.title &&
+              parameter.genres &&
+              parameter.genres.length > 0 &&
+              parameter.keywords &&
+              parameter.keywords.length > 0
+            );
+          } else if (machine === "text detection") {
+            return parameter.sentiment && parameter.content;
+          } else {
+            return false;
+          }
+        });
+        if (!dataset_verify) {
+          e.target.value = "";
+          setLoading(false);
+          return setAlert({
+            isAlert: true,
+            type: "error",
+            message: "Invalid Parameters",
+          });
         }
-      });
-      if (!dataset_verify) {
+      } catch (err) {
         e.target.value = "";
         setLoading(false);
         return setAlert({
