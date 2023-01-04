@@ -8,7 +8,7 @@ const ApiKeySchema = new Schema(
     },
     machine: {
       type: String,
-      enum: ["ChatBot", "Recommendation System", "Text Detection"],
+      enum: ["ChatBot", "Recommendation System", "Sentiment Analysis"],
       required: [true, "Machine Name field is required"],
       match: [
         /^[a-zA-Z_ ]+$/,
