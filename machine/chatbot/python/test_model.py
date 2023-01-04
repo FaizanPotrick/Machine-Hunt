@@ -26,7 +26,7 @@ def predict_class(message):
         classes = json.load(file)
     
     response = model.predict(np.array([bag_of_words(message)]))[0]
-    results = [[i, r] for i, r in enumerate(response) if r > 0.05]
+    results = [[i, r] for i, r in enumerate(response)]
     results.sort(key=lambda x: x[1], reverse=True)
 
     return classes[results[0][0]]

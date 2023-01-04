@@ -3,15 +3,8 @@ import random
 import numpy as np
 
 def replace(message):
-    message = re.sub(r"'t", " not", message)
-    message = re.sub(r"'re", " are", message)
-    message = re.sub(r"'s", " is", message)
-    message = re.sub(r"'d", " would", message)
-    message = re.sub(r"'ll", " will", message)
-    message = re.sub(r"'t", " not", message)
-    message = re.sub(r"'ve", " have", message)
-    message = re.sub(r"'m", " am", message)
-    message = re.sub( r"[?,:,|,!,\",',(,),*,+,\,,\-,.,/,;,[,\],^,_,{,}]", "", message)
+    message = re.sub(r"['t,'re,'s,'d,'ll,'ve,'m]", "", message)
+    message = re.sub( r"[#,&,?,:,|,!,\",',(,),*,+,\,,\-,.,/,;,[,\],^,_,{,}]", " ", message)
     message = re.sub("\s\s+", " ", message)
     message = message.lower()
     return message

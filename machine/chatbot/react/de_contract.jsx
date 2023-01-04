@@ -1,14 +1,13 @@
 export const replace = (message) => {
   message = message
-    .replaceAll("'t", " not")
-    .replaceAll("'re", " are")
-    .replaceAll("'s", " is")
-    .replaceAll("'d", " would")
-    .replaceAll("'ll", " will")
-    .replaceAll("'t", " not")
-    .replaceAll("'ve", " have")
-    .replaceAll("'m", " am")
-    .replaceAll(/[&\/\\#`,+()$~%.'":*!?<>{}]/g, "")
+    .replaceAll("'t", "")
+    .replaceAll("'re", "")
+    .replaceAll("'s", "")
+    .replaceAll("'d", "")
+    .replaceAll("'ll", "")
+    .replaceAll("'ve", "")
+    .replaceAll("'m", "")
+    .replaceAll(/[&\/\\#`,+()$~%.'":*!?<>{}]/g, " ")
     .replaceAll(/^\s+|\s+$/g, " ");
   message = message.toLowerCase();
   return message;
