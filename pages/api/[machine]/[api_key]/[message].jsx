@@ -24,14 +24,13 @@ const Message = async (req, res) => {
     if (MachineModel[machine] === undefined) {
       return res.status(404).send("Not Found");
     }
-    const api_response = await ApiKey.findOne({
+    const api_response = await ApiKey.find({
       api_key: api_key,
     });
-    if (api_response === null) {
+    if (api_response === []) {
       return res.status(400).send("Invalid API Key");
     }
-    const machine_name = api_response.machine;
-    if (machine_name.toLowerCase() !== machine) {
+    if (!api_response.find((e) => e.machine.toLowerCase() === machine)) {
       return res.status(400).send("Invalid API Key");
     }
     const response = await MachineModel[machine](message);
