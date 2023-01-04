@@ -1,9 +1,11 @@
 import get_chatbot_response from "../../../../machine/chatbot/react/test_model";
 import get_recommendation_system_response from "../../../../machine/recommendation system/react/test_model";
+import get_text_detection_response from "../../../../machine/text detection/react/test_model";
 
 const MachineModel = {
   chatbot: get_chatbot_response,
   "recommendation system": get_recommendation_system_response,
+  "text detection": get_text_detection_response,
 };
 
 const Message = async (req, res) => {
