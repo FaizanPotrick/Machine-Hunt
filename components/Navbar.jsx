@@ -80,8 +80,7 @@ const Navbar = () => {
               <Link
                 href={`/${machine}/${language}/docs`}
                 className={`${
-                  router.asPath === `/${machine}/${language}/docs` &&
-                  "text-[#00553a]"
+                  router.asPath.split("/").pop() === "docs" && "text-[#00553a]"
                 } hover:text-[#00553a] duration-300`}
               >
                 Docs
@@ -89,8 +88,7 @@ const Navbar = () => {
               <Link
                 href={`/${machine}/${language}/demo`}
                 className={`${
-                  router.asPath === `/${machine}/${language}/demo` &&
-                  "text-[#00553a]"
+                  router.asPath.split("/").pop() === "demo" && "text-[#00553a]"
                 } hover:text-[#00553a] duration-300`}
               >
                 Demo
@@ -98,8 +96,7 @@ const Navbar = () => {
               <Link
                 href={`/${machine}/${language}/api`}
                 className={`${
-                  router.asPath === `/${machine}/${language}/api` &&
-                  "text-[#00553a]"
+                  router.asPath.split("/").pop() === "api" && "text-[#00553a]"
                 } hover:text-[#00553a] duration-300`}
               >
                 API
@@ -107,7 +104,7 @@ const Navbar = () => {
               <Link
                 href={`/${machine}/${language}/train model`}
                 className={`${
-                  router.asPath === `/${machine}/${language}/train model` &&
+                  router.asPath.split("/").pop() === "train%20model" &&
                   "text-[#00553a]"
                 } hover:text-[#00553a] duration-300`}
               >
