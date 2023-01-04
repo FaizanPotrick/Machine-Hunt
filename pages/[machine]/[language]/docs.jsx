@@ -103,12 +103,12 @@ const Docs = () => {
         {DocsContext[machine] !== undefined && DocsContext[machine]["title"]}
       </div>
       <div className="mt-2 text-sm sm:text-base font-medium text-gray-600">
-        {DocsContext[machine] !== undefined &&
-          DocsContext[machine]["description1"]}
+        Most people feel intimidated by the process. It looks like a complex
+        task, and it is unclear how or where to start.
       </div>
       <div className="mt-1 text-sm sm:text-base font-medium text-gray-600">
         {DocsContext[machine] !== undefined &&
-          DocsContext[machine]["description2"]}
+          DocsContext[machine]["description"]}
       </div>
       <div className="sm:text-lg md:text-xl font-semibold text-[#00553a]/70 pt-5">
         Prerequisites
@@ -165,9 +165,9 @@ const Docs = () => {
         Create Dataset
       </div>
       <div className="mt-2 text-sm sm:text-base font-medium text-gray-600">
-        Before you start to create a {machine} model, it is important to understand
-        what you want your {machine} to do. On this basis, you have to create a
-        dataset. We have provided you a sample data set.
+        Before you start to create a {machine} model, it is important to
+        understand what you want your {machine} to do. On this basis, you have
+        to create a dataset. We have provided you a sample data set.
       </div>
       <FileSnippet file={`${machine}/dataset/dataset.json`} />
       <div className="sm:text-lg md:text-xl font-semibold text-[#00553a]/70 pt-5">

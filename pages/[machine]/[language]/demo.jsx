@@ -28,14 +28,23 @@ const Demo = () => {
       ],
     },
     "recommendation system": {
-      title: "Hi, KIWI here, How may I help you :)",
+      title: "Movie Time? Tell me your genre...",
       button: [
-        "Avatar",
-        "Spider Man",
-        "Iron Man",
-        "Hulk",
-        "Captain America",
-        "Thor",
+        "Action",
+        "Science Fiction",
+        "Thriller",
+        "Romance",
+        "Comedy",
+        "Horror",
+      ],
+    },
+    "sentiment analysis": {
+      title: "Heyyy there, What's on your mind?",
+      button: [
+        "I had a pretty bad day",
+        "Woah, I'm heavenly happy",
+        "I am doing just fine",
+        "You're great",
       ],
     },
   };

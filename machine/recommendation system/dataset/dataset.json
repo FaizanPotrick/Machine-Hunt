@@ -1,0 +1,59 @@
+[
+    {
+        "title": "Transformers",
+        "genres": [
+            "Adventure",
+            "Science Fiction",
+            "Action"
+        ],
+        "keywords": [
+            "destroy",
+            "transformation",
+            "alien",
+            "transformers",
+            "robot"
+        ]
+    },
+    {
+        "title": "Iron Man 2",
+        "genres": [
+            "Adventure",
+            "Action",
+            "Science Fiction"
+        ],
+        "keywords": [
+            "marvel comic",
+            "superhero",
+            "based on comic book",
+            "marvel cinematic universe"
+        ]
+    },
+    {
+        "title": "Ice Age: Dawn of the Dinosaurs",
+        "genres": [
+            "Animation",
+            "Comedy",
+            "Adventure"
+        ],
+        "keywords": [
+            "ice age",
+            "jungle",
+            "dinosaur"
+        ]
+    },
+    {
+        "title": "The Fast and the Furious",
+        "genres": [
+            "Action",
+            "Crime",
+            "Thriller"
+        ],
+        "keywords": [
+            "street gang",
+            "car race",
+            "undercover",
+            "los angeles",
+            "car"
+        ]
+    }
+]

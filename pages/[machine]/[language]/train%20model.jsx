@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import Head from "next/head";
 import chatbot_train_model from "../../../machine/chatbot/react/create_model";
 import recommendation_system_train_model from "../../../machine/recommendation system/react/create_model";
-import text_detection_train_model from "../../../machine/text detection/react/create_model";
+import sentiment_analysis_train_model from "../../../machine/sentiment analysis/react/create_model";
 import { StateContext } from "../../../context/StateContext";
 import { useRouter } from "next/router";
 import PageNotFound from "../../404";
@@ -22,8 +22,8 @@ const Training = () => {
       train_model: recommendation_system_train_model,
       file_format: `{\n\ttitle: "...",\n\tgenres: [...],\n\tkeywords: [...],\n}`,
     },
-    "text detection": {
-      train_model: text_detection_train_model,
+    "sentiment analysis": {
+      train_model: sentiment_analysis_train_model,
       file_format: `{\n\tsentiment: "...",\n\tcontent: "...",\n}`,
     },
   };
@@ -78,7 +78,7 @@ const Training = () => {
               parameter.keywords &&
               parameter.keywords.length > 0
             );
-          } else if (machine === "text detection") {
+          } else if (machine === "sentiment analysis") {
             return parameter.sentiment && parameter.content;
           } else {
             return false;

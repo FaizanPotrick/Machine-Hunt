@@ -29,12 +29,12 @@ const StateProvider = ({ children }) => {
       link: "/recommendation system",
     },
     {
-      title: "Text Detection",
-      tag: "text detection",
+      title: "Sentiment Analysis",
+      tag: "sentiment analysis",
       language: ["node", "python"],
       description:
-        "A technique to recognize or predict the label from user's based content.",
-      link: "/text detection",
+        "A technique that uses NLP to identify positive, negative or neutral sentiment in a text.",
+      link: "/sentiment analysis",
     },
   ];
 
