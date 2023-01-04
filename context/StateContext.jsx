@@ -28,27 +28,14 @@ const StateProvider = ({ children }) => {
         "An approach to filtering or predicting the user's preferences based on their choices.",
       link: "/recommendation system",
     },
-    // {
-    //   title: "Image Recognition",
-    //   tag: "image-recognition",
-    //   description:
-    //     "The ability of model to identify objects, places, people and actions in images.",
-    //   link: "/chatbots",
-    // },
-    // {
-    //   title: "Text Recognition",
-    //   tag: "text-recognition",
-    //   description:
-    //     "A system that recognizes text inside images and converts it into an electronic form.",
-    //   link: "/chatbots",
-    // },
-    // {
-    //   title: "Book Recommendation",
-    //   tag: "book-recommendation",
-    //   description:
-    //     "A system that filters books by predicting ratings or preferences of readers.",
-    //   link: "/chatbots",
-    // },
+    {
+      title: "Text Detection",
+      tag: "text detection",
+      language: ["node", "python"],
+      description:
+        "A technique to recognize or predict the label from user's based content.",
+      link: "/text detection",
+    },
   ];
 
   return (

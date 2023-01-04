@@ -165,7 +165,7 @@ const Docs = () => {
         Create Dataset
       </div>
       <div className="mt-2 text-sm sm:text-base font-medium text-gray-600">
-        Before you start to create a {machine}, it is important to understand
+        Before you start to create a {machine} model, it is important to understand
         what you want your {machine} to do. On this basis, you have to create a
         dataset. We have provided you a sample data set.
       </div>

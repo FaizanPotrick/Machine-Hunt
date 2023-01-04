@@ -48,7 +48,7 @@ const Index = () => {
         and <b>Demonstration</b>. You can use our <b>API KEY</b> and also train
         the model here.
       </div>
-      <div className="flex flex-wrap justify-center gap-4 mt-6 md:mt-8 lg:mt-10 max-w-7xl">
+      <div className="flex flex-wrap justify-center gap-4 mt-6 md:mt-8 lg:mt-10 max-w-6xl">
         {Machines.map(({ title, description, link }, index) => (
           <Link
             key={index}
