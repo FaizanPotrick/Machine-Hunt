@@ -92,6 +92,8 @@ const Dashboard = () => {
         >
           <option value="">Machine</option>
           <option value="ChatBot">ChatBot</option>
+          <option value="Recommendation System">Recommendation System</option>
+          <option value="Text Detection">Text Detection</option>
         </select>
         <button
           className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-xl text-sm sm:text-base duration-300 hover:scale-105 text-white font-medium"
