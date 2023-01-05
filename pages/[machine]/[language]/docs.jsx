@@ -196,7 +196,7 @@ const Docs = () => {
         (language === "python" && (
           <>
             <CmdSnippet command={"python -m venv fastml"} />
-            <CmdSnippet command={"uvicorn main:app --reload"} />
+            <CmdSnippet command={"uvicorn server:app --reload"} />
           </>
         ))}
       <div className="mt-2 text-sm sm:text-base font-medium text-gray-600">
