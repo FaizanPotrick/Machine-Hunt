@@ -40,9 +40,9 @@ const MyApp = ({ Component, pageProps }) => {
       </StateProvider>
       <footer className="text-center text-sm sm:text-base font-semibold text-[#00553a]">
         <div>&copy; 2022 Machine Hunt | All Rights Reserved</div>
-        <div className="text-[#00553a]/70 text-sm">
+        {/* <div className="text-[#00553a]/70 text-sm">
           Created by Faizan Potrick | Aarti Pawar
-        </div>
+        </div> */}
       </footer>
     </div>
   );
