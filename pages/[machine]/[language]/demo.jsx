@@ -55,7 +55,7 @@ const Demo = () => {
     setMessage("");
     try {
       const { data } = await axios.get(
-        `/api/${machine}/4Peh2AUcBlxZakxyjAGNzhLN/${message}`
+        `/api/${machine}/${process.env.API_KEY}/${message}`
       );
       setResponse({
         data: typeof data === "string" ? [data] : data,

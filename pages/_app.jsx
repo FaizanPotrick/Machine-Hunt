@@ -32,7 +32,7 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <StateProvider>
         <Navbar />
-        <GoogleOAuthProvider clientId="603448246114-q54gmt27amedb6i9svagarv8iuf3l527.apps.googleusercontent.com">
+        <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}>
           <Component {...pageProps} />
         </GoogleOAuthProvider>
         <Alert />
