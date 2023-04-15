@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from create_model import train_model
-from test_model import get_response
+from test_model import get_response # or import test_model as get_response 
 from fastapi.middleware.cors import CORSMiddleware
 import json
 
