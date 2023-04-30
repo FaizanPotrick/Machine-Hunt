@@ -28,7 +28,7 @@ const Dashboard = async (req, res) => {
     });
     res.status(200).json({
       user_name: user_response.name,
-      history: api_response,
+      history: api_response.reverse(),
     });
   } catch (error) {
     return res.status(400).json({
