@@ -26,7 +26,7 @@ const Message = async (req, res) => {
     }
     const api_response = await ApiKey.find({
       api_key: api_key,
-    });
+    }).lean();
     if (api_response === []) {
       return res.status(400).send("Invalid API Key");
     }

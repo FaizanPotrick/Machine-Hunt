@@ -25,7 +25,7 @@ const Api_Key = async (req, res) => {
       const api_response = await ApiKey.findOne({
         user_id: decoded.user_id,
         machine: machine_name,
-      });
+      }).lean();
       if (api_response) {
         return res.status(400).json({
           type: "error",

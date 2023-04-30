@@ -19,7 +19,7 @@ const Sign_in = async (req, res) => {
     const response = await User.findOne({
       email_address: email_address,
       type_of_user: "google",
-    });
+    }).lean();
     let user_response;
     if (response === null) {
       user_response = await User.create({

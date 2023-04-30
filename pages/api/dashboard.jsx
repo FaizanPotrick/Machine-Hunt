@@ -22,10 +22,10 @@ const Dashboard = async (req, res) => {
   }
   const decoded = jwt.verify(token, process.env.JWT_SECRET);
   try {
-    const user_response = await User.findById(decoded.user_id);
+    const user_response = await User.findById(decoded.user_id).lean();
     const api_response = await ApiKey.find({
       user_id: decoded.user_id,
-    });
+    }).lean();
     res.status(200).json({
       user_name: user_response.name,
       history: api_response.reverse(),

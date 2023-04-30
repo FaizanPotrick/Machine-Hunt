@@ -21,7 +21,7 @@ const Email_Address = async (req, res) => {
     const user_response = await User.findOne({
       email_address: email_address,
       type_of_user: "website",
-    });
+    }).lean();
     if (user_response === null) {
       return res
         .status(400)
