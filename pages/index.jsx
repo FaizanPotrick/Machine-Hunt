@@ -48,12 +48,12 @@ const Index = () => {
         and <b>Demonstration</b>. You can use our <b>API KEY</b> and also train
         the model here.
       </div>
-      <div className="flex flex-wrap justify-center gap-4 mt-6 md:mt-8 lg:mt-10 max-w-6xl">
+      <div className="flex flex-wrap justify-center gap-4 mt-6 max-w-6xl">
         {Machines.map(({ title, description, link }, index) => (
           <Link
             key={index}
             href={link}
-            className="flex flex-col justify-around min-h-full w-full max-w-xs sm:max-w-sm border-2 border-[#0e8f66]/20 shadow-lg hover:scale-95 duration-500 rounded-xl bg-[#0e8f66]/[0.15] p-4 md:p-5"
+            className="flex flex-col justify-around min-h-full w-full max-w-xs sm:max-w-sm border-2 border-[#0e8f66]/20 shadow-lg hover:scale-95 duration-500 rounded-lg bg-[#0e8f66]/[0.15] p-4 md:p-5"
           >
             <div className="text-lg md:text-xl font-semibold text-[#00553a] mb-3">
               {title}

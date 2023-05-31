@@ -19,14 +19,14 @@ const Navbar = () => {
             <Link
               href="/register"
               key="register"
-              className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-xl text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
+              className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-lg text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
             >
               Register
             </Link>,
             <Link
               href="/login"
               key="login"
-              className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-xl text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
+              className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-lg text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
             >
               Login
             </Link>,
@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link
               href="/dashboard"
               key="dashboard"
-              className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-xl text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
+              className="px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 rounded-lg text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
             >
               Dashboard
             </Link>,
@@ -45,7 +45,7 @@ const Navbar = () => {
                 setIsLogin(false);
               }}
               key="logout"
-              className="px-4 sm:px-5 py-1 sm:py-1.5 bg-[#0e8f66]/80 rounded-xl text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
+              className="px-4 sm:px-5 py-1 sm:py-1.5 bg-[#0e8f66]/80 rounded-lg text-sm sm:text-base duration-300 hover:scale-110 shadow-md"
             >
               Logout
             </button>,
@@ -70,13 +70,12 @@ const Navbar = () => {
           <Image src={Logo} alt="logo" className="w-fit h-8 sm:h-10 md:h-12" />
           <div className="shrink-0">Machine Hunt</div>
         </Link>
-
         {Machines.find(
           (e) => e.tag === machine && e.language.includes(language)
         ) &&
           machine &&
           language && (
-            <div className="flex items-center justify-center gap-4 lg:border-l-2 pl-2 lg:pl-4 text-sm sm:text-base md:text-lg text-[#00553a]/70 absolute left-10 lg:left-0 right-10 lg:right-0 bottom-0 lg:relative">
+            <div className="flex items-center justify-center gap-4 lg:border-l pl-2 lg:pl-3 text-sm sm:text-base md:text-lg text-[#00553a]/70 absolute left-10 lg:left-0 right-10 lg:right-0 bottom-0 lg:relative">
               <Link
                 href={`/${machine}/${language}/docs`}
                 className={`${

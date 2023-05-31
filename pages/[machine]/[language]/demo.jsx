@@ -105,7 +105,7 @@ const Demo = () => {
         />
         <button
           type="submit"
-          className="text-white px-5 py-1.5 bg-[#0e8f66]/80 rounded-r-xl text-sm sm:text-lg duration-300 hover:bg-[#0e8f66] shadow-md h-full border-2 border-l-0 border-[#0e8f66]/80"
+          className="text-white px-5 py-1.5 bg-[#0e8f66]/80 rounded-r-lg text-sm sm:text-lg duration-300 hover:bg-[#0e8f66] shadow-md h-full border-2 border-l-0 border-[#0e8f66]/80"
         >
           Send
         </button>
@@ -116,7 +116,7 @@ const Demo = () => {
             <button
               key={index}
               onClick={() => setMessage(title)}
-              className="flex flex-shrink-0 h-full border-2 border-[#0e8f66]/20 shadow-lg hover:scale-95 duration-500 rounded-xl bg-[#0e8f66]/[0.15] px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-medium text-[#00553a]"
+              className="flex flex-shrink-0 h-full border-2 border-[#0e8f66]/20 shadow-lg hover:scale-95 duration-500 rounded-lg bg-[#0e8f66]/[0.15] px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-medium text-[#00553a]"
             >
               {title}
             </button>
@@ -131,7 +131,7 @@ const Demo = () => {
             {response.data.map((data, index) => (
               <div
                 key={index}
-                className="border-2 border-[#0e8f66]/20 shadow-lg duration-500 rounded-xl bg-[#0e8f66]/[0.15] px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-medium text-[#00553a]"
+                className="border-2 border-[#0e8f66]/20 shadow-lg duration-500 rounded-lg bg-[#0e8f66]/[0.15] px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-lg font-medium text-[#00553a]"
               >
                 {data}
               </div>

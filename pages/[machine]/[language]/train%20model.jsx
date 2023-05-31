@@ -145,7 +145,7 @@ const Training = () => {
       <div className="flex flex-col items-center justify-center w-full">
         <label
           htmlFor="drop-file"
-          className="flex flex-col items-center justify-center w-full max-w-2xl py-5 sm:py-8 px-4 rounded-xl cursor-pointer bg-[#0e8f66]/20 shadow-inner drop-shadow-md text-[#00553a] duration-300 hover:scale-95"
+          className="flex flex-col items-center justify-center w-full max-w-2xl py-5 sm:py-8 px-4 rounded-lg cursor-pointer bg-[#0e8f66]/20 shadow-inner drop-shadow-md text-[#00553a] duration-300 hover:scale-95"
         >
           <svg
             className="w-12 sm:w-14 h-12 sm:h-14 mb-3"

@@ -19,7 +19,7 @@ const CmdSnippet = ({ command }) => {
         disabled={isCopy}
         className={`${
           isCopy && "text-[#c5c8c6]/80"
-        } h-7 flex justify-center items-center duration-300 hover:text-[#c5c8c6]/80`}
+        } flex justify-center items-center duration-300 hover:text-[#c5c8c6]/80`}
       >
         {!isCopy ? (
           <svg

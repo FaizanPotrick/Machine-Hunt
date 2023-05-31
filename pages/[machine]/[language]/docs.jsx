@@ -80,7 +80,7 @@ const Docs = () => {
   return Machines.find(
     (e) => e.tag === machine && e.language.includes(language)
   ) ? (
-    <div className="my-5 p-5 sm:p-6 md:p-8 flex flex-col justify-center items-start w-full max-w-7xl shadow-inner border-2 border-gray-200/60 rounded-xl">
+    <div className="my-5 p-5 sm:p-6 md:p-8 flex flex-col justify-center items-start w-full max-w-7xl shadow-inner border-2 border-gray-300/60 rounded-lg">
       <Head>
         <title>
           {Machines.map(({ title, tag }) => {

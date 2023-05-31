@@ -13,7 +13,7 @@ const Api = () => {
   return Machines.find(
     (e) => e.tag === machine && e.language.includes(language)
   ) ? (
-    <div className="my-5 p-8 sm:mb-auto flex flex-col justify-center items-start w-full max-w-7xl border-2 border-gray-200/60 shadow-inner rounded-xl">
+    <div className="my-5 p-8 sm:mb-auto flex flex-col justify-center items-start w-full max-w-7xl border-2 border-gray-300/60 shadow-inner rounded-lg">
       <Head>
         <title>
           {Machines.map(({ title, tag }) => {
@@ -85,7 +85,7 @@ const Api = () => {
       <ul className="list-disc pl-5 mt-3 w-full text-sm sm:text-base font-medium text-gray-600">
         <li>Replace &quot;API_KEY&quot; with the copied key.</li>
       </ul>
-      <ul className="list-disc pl-5 mt-3 w-full text-sm sm:text-base font-medium text-gray-600">
+      <ul className="list-disc pl-5 mt-3 mb-2 w-full text-sm sm:text-base font-medium text-gray-600">
         <li>Enter your own &quot;MESSAGE&quot; and get a response.</li>
       </ul>
       <CmdSnippet

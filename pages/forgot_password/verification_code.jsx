@@ -77,7 +77,7 @@ const Verification_Code = () => {
           content="Machine Hunt provides different programming languages to build your model. Build your model with your preferred language."
         />
       </Head>
-      <div className="max-w-md w-full flex flex-col justify-center items-center p-5 sm:px-10 shadow-inner drop-shadow-lg rounded-xl bg-white border">
+      <div className="max-w-md w-full flex flex-col justify-center items-center p-5 sm:px-10 shadow-inner drop-shadow-lg rounded-lg bg-white border">
         <div className="text-lg sm:text-xl mr-auto text-[#00553a] mb-5">
           Enter Verification Code
         </div>
@@ -111,7 +111,7 @@ const Verification_Code = () => {
             </button>
           </div>
           <button
-            className="text-[#fff] w-full ease-in-out mt-2 px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 mb-2 rounded-xl text-lg duration-300 hover:scale-105 shadow-md"
+            className="text-[#fff] w-full ease-in-out mt-2 px-4 sm:px-5 py-1.5 sm:py-2 bg-[#0e8f66]/80 mb-2 rounded-lg text-lg duration-300 hover:scale-105 shadow-md"
             type="submit"
           >
             Confirm

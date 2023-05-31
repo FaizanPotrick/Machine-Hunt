@@ -30,10 +30,10 @@ const Machine = () => {
       <div className="text-lg sm:text-xl md:text-2xl text-center font-medium text-[#00553a]/90">
         These are your two options:
       </div>
-      <div className="mt-1 max-w-5xl text-sm sm:text-lg text-center text-gray-800">
+      <div className="max-w-5xl text-sm sm:text-base text-center text-gray-800">
         Choose your Preferred Coding Language to construct the Model.
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-6 mt-6 md:mt-8 lg:mt-10 w-full">
+      <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-6 mt-6 w-full">
         {[
           {
             title: "Node",
@@ -49,7 +49,7 @@ const Machine = () => {
           <Link
             href={link}
             key={index}
-            className="h-full w-full max-w-xs sm:max-w-[21rem] border-2 border-[#0e8f66]/20 shadow-lg hover:scale-95 duration-500 rounded-xl bg-[#0e8f66]/[0.15] p-4 md:p-5"
+            className="h-full w-full max-w-xs sm:max-w-[21rem] border-2 border-[#0e8f66]/20 shadow-lg hover:scale-95 duration-500 rounded-lg bg-[#0e8f66]/[0.15] p-4 md:p-5"
           >
             <div className="text-xl md:text-2xl font-semibold text-[#00553a] mb-3">
               {title}
