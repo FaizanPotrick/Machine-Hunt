@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import { StateContext } from "../../../context/StateContext";
 import CmdSnippet from "../../../components/CmdSnippet";
 import Link from "next/link";
@@ -9,6 +9,10 @@ import PageNotFound from "../../404";
 const Api = () => {
   const { Machines } = useContext(StateContext);
   const { machine, language } = useRouter().query;
+  const URL = useRef("");
+  useEffect(() => {
+    URL.current = window.location.origin;
+  }, []);
 
   return Machines.find(
     (e) => e.tag === machine && e.language.includes(language)
@@ -88,9 +92,7 @@ const Api = () => {
       <ul className="list-disc pl-5 mt-3 mb-2 w-full text-sm sm:text-base font-medium text-gray-600">
         <li>Enter your own &quot;MESSAGE&quot; and get a response.</li>
       </ul>
-      <CmdSnippet
-        command={`https://machinehunt.vercel.app/api/${machine}/API_KEY/MESSAGE`}
-      />
+      <CmdSnippet command={`${URL.current}/api/${machine}/API_KEY/MESSAGE`} />
       <div className="mt-5 text-sm sm:text-base md:text-lg font-medium text-gray-600">
         Send an API request through Thunder Client or Postman
       </div>
